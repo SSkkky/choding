@@ -1,0 +1,29 @@
+$s-breakpoint: 430px;
+$m-breakpoint: 600px;
+$l-breakpoint: 768px;
+
+@mixin responsive($screen) {
+  @if ($screen =='s') {
+    @media screen and (max-width: $s-breakpoint) {
+      @content;
+    }
+  }
+
+  @if ($screen =='m') {
+    @media screen and (max-width: $m-breakpoint) {
+      @content;
+    }
+  }
+
+  @if ($screen =='l') {
+    @media screen and (max-width: $l-breakpoint) {
+      @content;
+    }
+  }
+
+  @if ($screen) {
+    @media screen and (max-width: $screen) {
+      @content;
+    }
+  }
+}

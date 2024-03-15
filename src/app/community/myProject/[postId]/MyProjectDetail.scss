@@ -1,0 +1,138 @@
+@use '../../../../styles/main' as *;
+
+#MyProjectDetail {
+    height: 100%;
+    min-height: 90vh;
+    padding: 2rem;
+    padding-top: calc(79px + 2rem);
+    color: $grayDark;
+
+    .mpDetailHeader {
+        padding-bottom: 0.5rem;
+
+        .mpdhTop {
+            @include flexbox(sb);
+
+            h3 {
+                font-size: $m;
+                font-weight: 400;
+            }
+
+            .iconCont {
+                @include flexbox();
+                gap: 0.5rem;
+
+                .like {
+                    border-radius: 1rem;
+                    border: 1px solid $main;
+                    padding: 0 0.5rem;
+                    height: 33px;
+                    @include flexbox(c, c);
+
+                    p {
+                        color: $main;
+                        font-size: 1rem;
+                    }
+                }
+
+                .like.active {
+                    background-color: $main;
+
+                    p {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .mpdhBottom {
+            padding-top: 0.5rem;
+            font-size: $s;
+
+            .postDate {
+                color: $gray;
+
+                &::before {
+                    content: '|';
+                    margin: 0 0.5rem;
+                }
+            }
+        }
+    }
+
+    .bodyText {
+        width: 100%;
+        padding: 2rem 0;
+        @include flexbox();
+        gap: 2rem;
+        border-top: 1px solid $grayLight;
+        border-bottom: 1px solid $grayLight;
+
+        img {
+            width: calc(50% - 2rem);
+            object-fit: cover;
+        }
+
+        .bodyTextBottom {
+            @include column-flexbox(sb, s);
+            width: 50%;
+            font-size: $b;
+
+            a {
+                color: $main;
+                font-weight: 700;
+            }
+
+            ul {
+                li {
+                    padding-bottom: 1.5rem;
+                    @include flexbox();
+                    gap: 1rem;
+                    align-items: baseline;
+
+                    h5 {
+                        width: 105px;
+                        font-size: $b;
+                    }
+
+                    div {
+                        width: calc(100% - 105px);
+                        @include flexbox();
+                        flex-wrap: wrap;
+                        gap: 0.5rem;
+
+                        p.tag {
+                            padding: 0.2rem 0.5rem;
+                            border-radius: 1rem;
+                            background: $wGray;
+                            font-size: $s;
+                        }
+                    }
+
+                    p {
+                        color: $gray;
+                        line-height: 160%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive(m) {
+    #MyProjectDetail {
+        .bodyText {
+            flex-direction: column;
+            gap: 1rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .bodyTextBottom {
+                width: 100%;
+            }
+        }
+    }
+}

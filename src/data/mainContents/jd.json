@@ -1,0 +1,170 @@
+{
+    "youtube": [
+        {
+            "title": "입문자를 위한 자바스크립트 기초 #0 수업 소개",
+            "link": "https://youtu.be/9olX2yyXnVA?si=vXESvNMEqaHN8-FY",
+            "displayLink": "ko.legacy.reactjs.org",
+            "snippet": "입문자를 위한 자바스크립트 기초 강의",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://i.ytimg.com/vi/9olX2yyXnVA/mqdefault.jpg",
+                        "width": "310",
+                        "height": "163"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "입문자를 위한 자바스크립트 기초 #1 자바스크립트 소개",
+            "link": "https://youtu.be/wQ1hZ1Wrqck?si=PExyIJmcry-V8sF-",
+            "displayLink": "ko.legacy.reactjs.org",
+            "snippet": "입문자를 위한 자바스크립트 기초 강의",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://i.ytimg.com/vi/9olX2yyXnVA/mqdefault.jpg",
+                        "width": "310",
+                        "height": "163"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "입문자를 위한 자바스크립트 기초 #3 객체 그리고 window",
+            "link": "https://youtu.be/re8fIHNxyUY?si=E1WBE9yFUKrN_wtl",
+            "displayLink": "velog.io",
+            "snippet": "Feb 22, 2023 ... [번역] 잘 알려진 UI 패턴을 사용하여 리액트 애플리케이션 모듈화하기 · 리액트는 뷰를 구축하기 위한 소박한 라이브러리입니다. · 현실 세계의 리액트 ...",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://i.ytimg.com/vi/lJd6VpkPM9I/mqdefault.jpg",
+                        "width": "297",
+                        "height": "170"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "twitter:description": "기존에 잘 알려진 UI 패턴을 프런트엔드 개발에 적용하는 과정을 적은 글입니다. 리팩토링하는 과정을 단계별로 쫓아가며 UI 패턴을 실제 리액트 사례에 적용하는 방법을 살펴보고 그 이점을 확인할 수 있습니다 :)"
+                    }
+                ]
+            }
+        }
+    ],
+    "google": [
+        {
+            "title": "jQuery 기본 문법 $() 정리",
+            "link": "https://inpa.tistory.com/entry/jQuery-%F0%9F%93%9A-%EA%B8%B0%EB%B3%B8-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC",
+            "displayLink": "inpa.tistory.com",
+            "snippet": "Sep 28, 2021 ... jQuery 기본 문법 $(선택자).동작함수1().동작함수2() $(선택자).동작함수1().동작함수2() 달러($) 기호는 제이쿼리를 의미하고, 제이쿼리에 접근할 ...",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR00JfA0mbqpowYntLIkxOHMuiOBQI6ECNy3HWiTKCzLqHKc_ZELeEj-ltu",
+                        "width": "335",
+                        "height": "150"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "twitter:description": "jQuery 기본 문법 $(선택자).동작함수1().동작함수2() $(선택자).동작함수1().동작함수2() 달러($) 기호는 제이쿼리를 의미하고, 제이쿼리에 접근할 수 있게 해주는 식별자이다. - 선택자를 이용하여 원하는 HTML 요소를 선택하고, - 동작 함수를 정의하여 선택된 요소에 원하는 동작을 설정한다. jQuery $객체 ​jQuery를 사용하기 위해서는 먼저 jQuery 객체를 생성하여야 한다. 생성된 jQuery 객체는 다양한 메소드를 가지는데, jQuery를 학습한다고 하는 것은 대체로 이 메소드를 사용하는 방법을 익히는 것이다. $() // jQuery() 함수의 축약형 jQuery() 함수는 전달되는 인수의 종류에 따라 다른 움직임을 하지만 결국 jQuery 객체를 반환한다. 인수의 종류.."
+                    }
+                ]
+            }
+        },
+        {
+            "title": "JQuery - JQuery 기본문법",
+            "link": "https://soft91.tistory.com/9",
+            "displayLink": "soft91.tistory.com",
+            "snippet": "Oct 21, 2017 ... JQuery - JQuery 기본문법 ; 종류, 사용법, 설명 ; 전체 선택자, $(\"*\"), 모든 요소를 선택 ; 아이디 선택자, $(\"#아이디 명\"), id 속성에 지정한 값을 가진 ...",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSTm7oAFYkZbFbTPd8A8r8_F93EvNzqYLcARG-0PtM6MM20fY9cXvRYPvxE",
+                        "width": "200",
+                        "height": "200"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "twitter:description": "직접 선택자 종류 사용법 설명 전체 선택자 $(\"*\") 모든 요소를 선택 아이디 선택자 $(\"#아이디 명\") id 속성에 지정한 값을 가진 요소를 선택 클래스 선택자 $(\".클래스 명\") 클래스 속성에 지정한 값을 가진 요소를 선택 요소명 선택자 $(\"요소명\") 지정한 요소명과 일치하는 요소들만 선택 그룹 선택자 $(\"선택1, 선택2, 선택3 ... 선택n\") 선택1, 선택2 .... 선택n에 지정된 요소들을 한번에 선택 인접 관계 선택자 종류 사용법 설명 부모 요소 선택자 $(\"요소 선택\").parent() 선택한 요소의 부모 요소를 선택 상위 요소 선택자 $(\"요소 선택\").parents() 선택한 요소의 상위 요소를 모두 선택 하위 요소 선택자 $(\"요소 선택 하위 요소\") 선택한 요소에 지정한 하.."
+                    }
+                ]
+            }
+        },
+        {
+            "title": "[jQuery] jQuery 시작 / 기본 문법 정리",
+            "link": "https://milku.tistory.com/84",
+            "displayLink": "milku.tistory.com",
+            "snippet": "Aug 26, 2022 ... jQuery 이펙트 · 1. 숨김/표시. hide() : 선택한 요소를 숨깁니다. show() : 선택한 요소를 표시합니다. · 2. 페이드. fadeIn() : 선택한 요소를 페이드 ...",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQrRRMPBVPaDpOG4JnJgjuHPL4ULBET3BTeWQfuq7P5ZR7GXPbQUygE2Q",
+                        "width": "66",
+                        "height": "56"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "twitter:description": "jQuery 소개 jQuery는 자바스크립트 라이브러리로 Javascript 프로그래밍을 크게 단순화합니다. HTML/DOM 조작, CSS 조작, 이벤트, 효과 및 애니메이션, Ajax등의 기능이 포함되어 있습니다. jQuery 연결하기 jQuery를 연결하는 방법에는 두 가지가 있습니다. 1. 다운로드 받기 html의 2. CDN 이용 html의 jQuery 구문 jQuery의 기본 형식입니다. $(selector).action();// $(선택자).동작함수() $(document).ready() 안에 jQuery 함수를 입력합니다. → 문서가 완전히 로드되고 나서 jQuery를 실행합니다. $(document).ready(function(){ // jQuery methods go here... });.."
+                    }
+                ]
+            }
+        },
+        {
+            "title": "jQuery 문법 정리 및 실습",
+            "link": "https://velog.io/@sanna422/jQuery-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC-%EB%B0%8F-%EC%8B%A4%EC%8A%B5",
+            "displayLink": "velog.io",
+            "snippet": "Jul 17, 2021 ... 1. jQuery Selectors. Query 선택기는 이름, ID, 클래스, 유형, 속성, 속성 값 등을 기반으로 HTML 요소를 \"찾기\"(또는 선택)하는 데 사용됩니다. jQuery ...",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS_mNOxe8dIfsYpa1TTCt_ym8_iyHOm_Kyeue1Qg9GjHvWI3FmjbSiVqU4s",
+                        "width": "310",
+                        "height": "163"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "twitter:description": "jQuery는 자바스크립트 라이브러리입니다.jQuery는 JavaScript 프로그래밍을 크게 단순화합니다."
+                    }
+                ]
+            }
+        }
+    ],
+    "naver": [
+        {
+            "title": "[2024.01.18] SASS 셋팅 문법",
+            "link": "https://blog.naver.com/jibbbang2/223326849116",
+            "description": "watch sass ) [ SASS 파일생성 ] 파일형식 : .scss ex. test.scss 이런식으로 생성하면 된다. [ SASS 문법... [ SASS 없이 CSS 에서도 문법 사용이 가능하다. ] ( 근데 사용법이 복잡함 ) [ .scss 파일형식 말고... ",
+            "bloggername": "★",
+            "bloggerlink": "blog.naver.com/jibbbang2",
+            "postdate": "20240118"
+        },
+        {
+            "title": "Sass 기본 문법 예시 정리",
+            "link": "https://blog.naver.com/nasca55/223096854380",
+            "description": "오늘은 얼마 전에 Sass라는 CSS 라이브러리를 배운 기념으로 Sass 기본 문법에 대해 메모해놨던... Sass 문법 1. 변수 : 자주 쓰는 값들을 변수에 저장하면 쉽게 갖다 쓸수도 있고, 나중에 수정할 때도... ",
+            "bloggername": "응애프로그래머",
+            "bloggerlink": "blog.naver.com/nasca55",
+            "postdate": "20230509"
+        },
+        {
+            "title": "[코딩애플]아니면 CSS대신 SASS를 쓰자 (SASS 문법 10분... ",
+            "link": "https://blog.naver.com/with_with_/222661856566",
+            "description": "이제 여기에 sass 문법을 적용하면 끝입니다. sass 문법을 사용하는 이유는 프로그래밍... 함수만드는 문법입니다. 함수는 코드를 축약하고 재사용할 때 많이 쓰죠? sass에서는 function 대신 @mixin... ",
+            "bloggername": "하와이검은파도",
+            "bloggerlink": "blog.naver.com/with_with_",
+            "postdate": "20220302"
+        },
+        {
+            "title": "실무에서 사용하는 SASS 문법 정리",
+            "link": "https://blog.naver.com/wd_byeong/223221106968",
+            "description": "것이 sass이다. 1. 변수 사용법에 대해 알아보자 이제 이 색을 사용할 때 아래와 같이 사용해주면... 했는데 sass에서는 class를 한번에 관리할 수 있다. 코드 가독성이 좋아질 거 같다.(물론 모든... ",
+            "bloggername": "하늘",
+            "bloggerlink": "blog.naver.com/wd_byeong",
+            "postdate": "20230925"
+        }
+    ]
+}

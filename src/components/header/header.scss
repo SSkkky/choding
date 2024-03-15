@@ -1,0 +1,62 @@
+@use '../../styles/main' as *;
+
+#mainHeader {
+    padding: 0 2rem;
+    box-shadow: 0 18px 18px -10px $wGray;
+    background-color: #fff;
+    position: fixed;
+    left: 50%;
+    width: 100%;
+    max-width: 768px;
+    z-index: 5;
+    transform: translateX(-50%);
+
+    .headerTOP {
+        @include flexbox(sb, c);
+        padding: 1rem 0;
+
+        .leftSide {
+            width: 20%;
+
+            .mainActiveTopMenu {
+                font-weight: 900;
+            }
+        }
+
+        .titleLogo {
+            @include flexbox(c, c);
+            width: 60%;
+        }
+
+        .rightSide {
+            @include flexbox(e, c);
+            width: 20%;
+
+            .signUp {
+                color: $main;
+                font-weight: 700;
+            }
+        }
+
+        div {
+            @include flexbox(sb, c);
+        }
+
+
+    }
+
+    .headerGNB {
+        @include flexbox(c, c);
+        gap: 2rem;
+        padding: 1rem 0;
+    }
+
+    .subMenuBar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        .link {}
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "oxQuiz":[
+        {
+            "id":0,
+            "number" :1,
+            "question" : "변수를 선언할 때 재선언이 불가능한 키워드는 'const'이다.",
+            "answer": true
+        },
+        {
+            "id":1,
+            "number" :2,
+            "question" : "' == ' 연산자는 값과 데이터 유형까지 모두 일치하는지 확인한다.",
+            "answer": false
+        },
+        {
+            "id":2,
+            "number" :3,
+            "question" : "Next.js에서 동적 라우팅을 구현하기 위해 사용되는 파일이름은 [id]이다.",
+            "answer": true
+        },
+        {
+            "id":3,
+            "number" :4,
+            "question" : "React의 'props'는 부모 컴포넌트로부터 전달되는 읽기 전용 데이터이다.",
+            "answer": true
+        },
+        {
+            "id":4,
+            "number" :5,
+            "question" : "Next.js는 리액트 애플리케이션의 클라이언트 사이드 라우팅을 담당한다.",
+            "answer": false
+        },
+        {
+            "id":5,
+            "number" :6,
+            "question" : "자바스크립트의 'parseInt()' 함수는 문자열을 정수로 변환한다.",
+            "answer": true
+        },
+        {
+            "id":6,
+            "number" :7,
+            "question" : "React에서 'Context API'는 컴포넌트 트리 전체에서 데이터를 전달하는 데 사용된다.",
+            "answer": true
+        },
+        {
+            "id":7,
+            "number" :8,
+            "question" : "자바스크립트에서 '비동기(asynchronous)' 코드를 처리하는 방법 중 하나는 '콜백(callback)' 함수를 사용하는 것이다.",
+            "answer": true
+        },
+        {
+            "id":8,
+            "number" :9,
+            "question" : "React에서 'useEffect' 훅을 사용할 때 두 번째 인자로 빈 배열([])을 전달하면 컴포넌트가 마운트될 때 한 번만 실행된다.",
+            "answer": true
+        },
+        {
+            "id":9,
+            "number" :10,
+            "question" : "React에서 'useState' 훅을 사용하여 여러 개의 상태를 한 번에 처리할 수 있습니다.",
+            "answer": false
+        }
+    
+    ]
+}

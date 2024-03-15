@@ -1,0 +1,51 @@
+@use '../../../../styles/main' as *;
+
+.QnAWriteMain{
+    padding-top: 6rem;
+    margin: 0 $b;
+    min-height: calc(100vh - 3rem);
+    >form{
+        .writebox{
+            margin-top: $b;
+        }
+        .QnAWriteTitle{
+            width: 100%;
+            height: $l;
+            font-weight: bold;
+            padding: 36px 0;
+            padding-left: 14px;
+            // padding-bottom: 36px;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            &::placeholder{
+                color: $main;
+                font-size: $m;
+            }
+        }
+        .BtnBox{
+            display: flex;
+            justify-content: flex-end;
+            >button{
+                border-radius: 100px;
+                padding: 4px 18px;
+                margin-left: 9px;
+            }
+            .save{
+                background-color: $main;
+                color: white;
+            }
+            .delete{
+                background-color: $grayLight;
+            }  
+        }
+        
+        .quill{
+            margin:0 !important;
+            // margin-top: $b !important;
+            margin-bottom: $b !important;
+            .ql-container{
+                height: 88% !important;
+            }
+        }
+    }
+}

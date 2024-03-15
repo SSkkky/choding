@@ -1,0 +1,68 @@
+@use '../../../../styles/main.scss' as *;
+
+.postMain{
+    padding: 6rem 2rem 2rem 2rem;
+    .postContainer{
+        >p{
+            padding: $s 0 $m 0;
+            color: $grayDark;
+        }
+        .postDetail{
+            >p{
+                max-width: 600px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .postForm{
+        .commentLength{
+            padding: $l 0 9px 0;
+        }
+        >textarea{
+            resize: none;
+            border: 1px solid black;
+            width: 100%;
+            padding: $t;
+            margin-bottom: $b;
+        } 
+        >input{
+            border: 1px solid black;
+        }
+        .qnapostBtn{
+            display: flex;
+            justify-content: flex-end;
+            >button{
+                color: white;
+                background-color: $main;
+                border-radius: 9px;
+                padding: 4px $b;
+            }
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+    }
+}
+.commentContainer{
+    padding: $b 2rem;
+    .commentbox{
+        border-bottom: 1px solid $grayLight;
+        padding: 9px 0;
+        font-size: $t;
+        .commentinfo{
+            display: flex;
+            align-items: center;
+            >img{
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                margin-right: 4px;
+            }
+        }
+        .textbox{
+            padding: 9px 0 $m 0;
+            .commentText{
+                padding-bottom: 9px;
+            }
+        }
+    }
+}

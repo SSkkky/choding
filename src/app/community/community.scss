@@ -1,0 +1,30 @@
+// 커뮤니티 홈 공통
+@use '../../styles/main' as *;
+
+#communityHome {
+    padding-top: 6rem; //헤더 밀려남
+
+    * {
+        color: $grayDark; // 기본 설정
+    }
+
+    .communityContHeader {
+        padding: 0 2rem;
+
+        .containerTitle {
+            font-size: $m;
+            text-align: center;
+        }
+
+        div {
+            @include flexbox(e, c);
+            margin: 1rem 0;
+
+            .more {
+                font-size: $s;
+                color: $gray;
+                @include flexbox(e, c);
+            }
+        }
+    }
+}

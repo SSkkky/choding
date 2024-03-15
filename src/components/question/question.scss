@@ -1,0 +1,220 @@
+@use '../../styles/main' as *;
+
+.question {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    padding-top: 0;
+
+}
+
+
+.question .popUpQues {
+    padding-top: 79.31px;
+    backdrop-filter: brightness(50%);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 10;
+    transition: 1.5s;
+
+    .popUpBg {
+        width: 100%;
+        height: 100%;
+        @include pos-center();
+
+
+        .popUpX {
+            position: absolute;
+            right: calc(50% - 180px);
+            top: calc(50% - 220px);
+            z-index: 1;
+        }
+
+        .popUp01,
+        .popUp02,
+        .popUp03,
+        .popUp04 {
+            display: block;
+            @include pos-center();
+            width: 400px;
+            height: 480px;
+            background: #fff url(../../essets/oxPopupCharactor.png) 100% 85% no-repeat;
+            background-size: contain;
+            border-radius: 9px;
+            text-align: center;
+            overflow: hidden;
+
+            .popUpContents {
+                height: 100%;
+                color: $grayDark;
+                @include column-flexbox(sb, c);
+
+                h3 {
+                    padding-top: 3rem;
+                }
+
+                .popUpSubTitle {
+
+                    font-size: $b;
+                    line-height: 160%;
+
+                    .nameTitle {
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+
+                    .noNameTitle {
+                        font-weight: 600;
+                    }
+
+                    .scoreBox {
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+
+                    .lvBox {
+                        font-size: $m;
+                        font-weight: 600;
+                        color: $main;
+                        padding: 2rem 0;
+                    }
+
+                }
+
+                .dailyQuestion {}
+
+                .tagBox {
+                    span {
+                        @include btnBase();
+                        font-size: $s;
+                        padding: 1px 1rem;
+                        margin: 18px 5px;
+                    }
+                }
+
+                .tagBoxOX {
+                    span {
+                        @include btnBase();
+                        font-size: $s;
+                        padding: 1px 1rem;
+                        margin: 18px 5px;
+                        color: $main;
+                        border: 1px solid $main;
+                    }
+                }
+            }
+
+            .popUpBtn {
+                // margin-top: 36px;
+                width: 100%;
+                height: 56px;
+                background-color: $main;
+                font-size: $b;
+                color: #fff;
+            }
+        }
+
+        .popUp02,
+        .popUp03 {
+            background: #fff;
+
+            .qQuestion {
+                // height: 5rem;
+                padding: 0 2rem;
+                line-height: 160%;
+                word-break: keep-all;
+            }
+
+            .qAnswer {
+                display: flex;
+                gap: 10px;
+
+                button {
+                    width: 50%;
+                    font-size: 5rem;
+                    padding: 0 1.5rem;
+                    background-color: $grayLight;
+                    border-radius: 0.5rem;
+                    color: #fff;
+                }
+
+                button.active {
+                    background-color: $main;
+                }
+
+                form {
+                    >p {
+                        padding: 8px 60px;
+                        border: 1px solid $main;
+                        border-radius: 1rem;
+                        margin-bottom: 0.5rem;
+
+                        // .radio_cus input[type="radio"] {
+                        //     overflow: hidden;
+                        //     position: absolute;
+                        //     width: 1px;
+                        //     height: 1px;
+                        //     margin: -1px;
+                        //     font-size: initial;
+                        //     clip: rect(0 0 0 0);
+
+                        // }
+                    }
+
+                }
+            }
+
+            .timer {
+                color: $main;
+                font-size: $m;
+            }
+        }
+
+        .popUp03 {
+
+            background: transparent;
+
+            .popUpSubTitle {
+                .valueOOO {
+                    font-size: 4rem;
+                    color: $main;
+                    padding-bottom: 2rem;
+                }
+
+                .valueXXX {
+                    color: $grayLight;
+                    padding-bottom: 2rem;
+                }
+
+                .lvBoxOX {
+                    font-size: $m;
+                    font-weight: 600;
+                    color: $main;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        .popUp03::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 366px;
+            background-color: #fff;
+            border-radius: 9px;
+            top: 30%;
+            left: 0;
+            z-index: -1;
+        }
+
+        .popUp04 {
+            background: #fff url(../../essets/oxPopupCharactor02.png) 100% 85% no-repeat;
+        }
+    }
+}

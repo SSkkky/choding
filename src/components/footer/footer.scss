@@ -1,0 +1,12 @@
+@use '../../styles/main' as *;
+
+footer {
+    background-color: $grayDark;
+
+    p {
+        font-size: $t;
+        padding: 1rem 0;
+        text-align: center;
+        color: #fff;
+    }
+}

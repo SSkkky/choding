@@ -1,0 +1,12 @@
+@use '../styles/main' as *;
+
+.mainContainer {
+    padding-top: 6rem;
+    position: relative;
+
+    .padding {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 2rem;
+    }
+}

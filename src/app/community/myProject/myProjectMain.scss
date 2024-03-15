@@ -1,0 +1,23 @@
+@use '../../../styles/main' as *;
+
+#myProjectMain {
+    min-height: calc(100svh - 3rem);
+
+    #WriteMyProject {
+        position: fixed;
+        bottom: 2rem;
+
+        a {
+            @include flexbox(c, c);
+
+            background-color: $main;
+            color: #fff;
+            border-radius: 50%;
+            font-size: $l;
+            line-height: 100%;
+            width: 40px;
+            height: 40px;
+            box-shadow: 0 0 10px 0 $main;
+        }
+    }
+}

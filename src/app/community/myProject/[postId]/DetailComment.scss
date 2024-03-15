@@ -1,0 +1,119 @@
+@use '../../../../styles/main' as *;
+
+#myProjectDetailComment {
+    padding: 1rem 0;
+
+    .mpdInputComment {
+        @include column-flexbox();
+        gap: 0.5rem;
+
+        textarea {
+            width: 100%;
+            padding: 1rem 1rem 1.5rem;
+            resize: none;
+            outline: none;
+            line-height: 180%;
+            border: 1px solid $grayLight;
+            border-radius: 0.25rem;
+        }
+
+        .btnCont {
+            @include flexbox(e, e);
+
+            button {
+                background-color: $main;
+                padding: 0.5rem;
+                border-radius: 0.25rem;
+                color: #fff;
+            }
+        }
+    }
+
+    #DetailComment {
+        padding: 1rem 0;
+        @include flexbox;
+        flex-direction: column-reverse;
+
+        .mpdComment {
+            padding: 1rem 0;
+            border-bottom: 1px solid $wGray;
+
+            #mpCommentsProfile {
+                @include flexbox(sb, c);
+
+                .profileCont {
+                    font-size: $s;
+                    @include flexbox(s, c);
+                    gap: 0.5rem;
+
+                    .mydUserPic {
+                        img {
+                            object-fit: cover;
+                            border-radius: 50%;
+                            border: 1px solid $main;
+                        }
+                    }
+
+                    .mydCommentDate {
+                        @include flexbox(c, c);
+                        color: $grayLight;
+
+                        &::before {
+                            margin-right: 0.5rem;
+                            width: 1px;
+                            height: 0.7rem;
+                            background-color: $grayLight;
+                            content: '';
+                        }
+                    }
+                }
+
+                .functionCont {
+                    @include flexbox;
+                    gap: 0.5rem;
+
+                    button {
+                        color: $gray;
+                    }
+
+                    button:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .commentText {
+                margin-top: 1rem;
+
+                textarea {
+                    width: 100%;
+                    height: 4rem;
+                    padding: 1rem;
+                    resize: none;
+                    outline: none;
+                    line-height: 180%;
+                    border: 1px solid #CCCCCC;
+                    border-radius: 0.25rem;
+                }
+
+                .updateBtnCont {
+                    margin-top: 0.5rem;
+                    width: 100%;
+                    @include flexbox(e);
+
+                    .updateComplete {
+                        transition: 0.2s ease-in-out;
+                        padding: 0.5rem;
+                        border-radius: 3px;
+                        background-color: $grayLight;
+                        color: #fff;
+                    }
+
+                    .updateComplete:hover {
+                        background-color: $gray;
+                    }
+                }
+            }
+        }
+    }
+}

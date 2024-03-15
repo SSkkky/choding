@@ -1,0 +1,165 @@
+{
+    "youtube": [
+        {
+            "title": "파이썬 기초 강의 [1강.파이썬 시작하기]",
+            "link": "https://youtu.be/UMfCZMuZoRk?si=C-gD5gBE-I4r7T-U",
+            "displayLink": "ko.legacy.reactjs.org",
+            "snippet": "",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://i.ytimg.com/vi/UMfCZMuZoRk/default.jpg",
+                        "width": "310",
+                        "height": "163"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "파이썬 기초 강의 [2강.파이썬 기초 문법] (SONOL)",
+            "link": "https://youtu.be/sS3NQrnfGzQ?si=I7ZjM-bD_syaiAzn",
+            "displayLink": "ko.legacy.reactjs.org",
+            "snippet": "",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://i.ytimg.com/vi/sS3NQrnfGzQ/default.jpg",
+                        "width": "310",
+                        "height": "163"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "파이썬 기초 강의 [3강. 자료형]",
+            "link": "https://youtu.be/WRhCvVooCUo?si=i0qSLz2u0cNeYI_g",
+            "displayLink": "velog.io",
+            "snippet": "",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://i.ytimg.com/vi/WRhCvVooCUo/mqdefault.jpg",
+                        "width": "297",
+                        "height": "170"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "twitter:description": "기존에 잘 알려진 UI 패턴을 프런트엔드 개발에 적용하는 과정을 적은 글입니다. 리팩토링하는 과정을 단계별로 쫓아가며 UI 패턴을 실제 리액트 사례에 적용하는 방법을 살펴보고 그 이점을 확인할 수 있습니다 :)"
+                    }
+                ]
+            }
+        }
+    ],
+    "google": [
+        {
+            "title": "NextJS 14 - router.events",
+            "link": "https://velog.io/@khxxjxx/NextJS-14-router.events",
+            "displayLink": "velog.io",
+            "snippet": "nextjs 13 버전부터 기존 pages 디렉토리에서 라우팅 되던 방식과 다르게, app 디렉토리로 라우팅 하는 방식으로 변경되었다; 그래서 useRouter 사용시 import 하는 ...",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS_mNOxe8dIfsYpa1TTCt_ym8_iyHOm_Kyeue1Qg9GjHvWI3FmjbSiVqU4s",
+                        "width": "310",
+                        "height": "163"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "twitter:description": "nextjs appRouter에서 router.events 기능 구현하기"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "velog",
+            "link": "https://velog.io/@asdf99245/Next.js-app-router-%EA%B3%B5%EC%8B%9D%EB%AC%B8%EC%84%9C-%EC%A0%95%EB%A6%AC",
+            "displayLink": "velog.io",
+            "snippet": "개발자들을 위한 블로그 서비스. 어디서 글 쓸지 고민하지 말고 벨로그에서 시작하세요.",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS_mNOxe8dIfsYpa1TTCt_ym8_iyHOm_Kyeue1Qg9GjHvWI3FmjbSiVqU4s",
+                        "width": "310",
+                        "height": "163"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "Nextjs 14 + Styled Component 사용기",
+            "link": "https://velog.io/@qmflf556/nextjs-styled-component",
+            "displayLink": "velog.io",
+            "snippet": "Nov 20, 2023 ... 먼저 styled-component 를 nextjs 와 함께 사용하려니 Page Router 방식에서 App Router 방식으로 전환되는 과정에서 ThemeProvider 같은걸 어떻게 설정 ...",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRvK0hMd01CfmoWG-UBAqgv5NvNXVijegmbjFSONKY3yZnGpIXQc-u_hU4",
+                        "width": "312",
+                        "height": "162"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "twitter:description": "custom storybook control 설정\nhttps://thoughtbot.com/blog/creating-a-custom-color-control-in-storybook\n\nwarning className did not match 오류\nhttps://jha-m"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "[Next.js] 기본 & 다이나믹 라우팅 / 13버전 부터 달라진 점",
+            "link": "https://velog.io/@tnrud4685/Next.js-%EA%B8%B0%EB%B3%B8-%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9-%EB%9D%BC%EC%9A%B0%ED%8C%85-13%EB%B2%84%EC%A0%84-%EB%B6%80%ED%84%B0-%EB%8B%AC%EB%9D%BC%EC%A7%84-%EC%A0%90",
+            "displayLink": "velog.io",
+            "snippet": "Nov 8, 2023 ... 13버전 이하에서 사용하던 기본 라우팅 방법, 다이나믹 라우팅 방법이 바뀌었다.Next.js 13 이전에는 페이지 라우터가 Next.js에서 경로를 만드는 ...",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR8-mThsQVwIbxceRIZwt6IYF6hcklLn7kNrhWQltUbflWSCTPZSJZnq28",
+                        "width": "347",
+                        "height": "145"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "twitter:description": "13버전 이하에서 사용하던 기본 라우팅 방법, 다이나믹 라우팅 방법이 바뀌었다.Next.js 13 이전에는 페이지 라우터가 Next.js에서 경로를 만드는 주요 방법이었습니다. 직관적인 파일 시스템 라우터를 사용하여 각 파일을 경로에 매핑했습니다. Pages 라우터는"
+                    }
+                ]
+            }
+        }
+    ],
+    "naver": [
+        {
+            "title": "nextJs 사용 풀스택 토이 프로젝트 요약",
+            "link": "https://blog.naver.com/0902ab/223230095868",
+            "description": "설명하는 해당 포스팅에서 전부 설명하기에는 무리가 있어 잘 작성해 놓은 블로그 글 하나를 먼저 읽어보는 것이 좋다. 현재 프로젝트의 pages 폴더이다. nextJs는 라우팅 시스템이 파일... ",
+            "bloggername": "LocalShelter",
+            "bloggerlink": "blog.naver.com/0902ab",
+            "postdate": "20231006"
+        },
+        {
+            "title": "NextJS 빌드 오류 EPERM, MODULE_NOT_FOUND",
+            "link": "https://imperfectblog.tistory.com/282",
+            "description": "pnpm + Turborepo + NextJS 조합으로 구성된 프로젝트를 윈도우에서 빌드할 때... 못 하는 것 같다. 다만, outputFileTracingRoot: path.join(__dirname, '../../')과 같이 빌드... ",
+            "bloggername": "NO NAME",
+            "bloggerlink": "https://imperfectblog.tistory.com/",
+            "postdate": "20230510"
+        },
+        {
+            "title": "[Nextjs] 미니 프로젝트 스터디 2차",
+            "link": "https://blog.naver.com/jweidon888/223099469511",
+            "description": "이들은 Nextjs에서 제공하는 data fetching method이다. Nextjs Modules nodemon 서버 코드를 변경할... 제공하는 장점도 가지고 있다. Entity 쉽게 말해서 프로젝트에 사용할 테이블을 설계하는 단계다.... ",
+            "bloggername": "Steady Nerdy",
+            "bloggerlink": "blog.naver.com/jweidon888",
+            "postdate": "20230511"
+        },
+        {
+            "title": "일기- 가끔 나는 삽질을 해...♀️ (feat. NextJS 404이슈)",
+            "link": "https://blog.naver.com/appleguswjd2/223242623623",
+            "description": "프레임워크 프로젝트 스타터에서 넥스트 버전이 13. 4 버전이었는데 그게 문제였다.... Localhost에는 잘만 작동하는 애가 도커 빌드해서 배포 하면 안됨^^,,,,, 진짜 이 짤 생각,,,, 처음 써보는... ",
+            "bloggername": "Sally:: 샐리가 보는 세상",
+            "bloggerlink": "blog.naver.com/appleguswjd2",
+            "postdate": "20231021"
+        }
+    ]
+}

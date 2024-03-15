@@ -1,0 +1,296 @@
+@use '../../styles/main' as *;
+
+.myPageMain {
+    padding-top: 4rem;
+    color: $grayDark;
+
+    .myPageBack {
+        background-color: $main;
+        height: 290px;
+        width: 100%;
+        color: #fff;
+        position: relative;
+    }
+
+    .myPageTitle {
+        padding: 2rem;
+        max-width: calc(430px);
+        margin: 0 auto;
+
+        // margin-bottom: 4rem;
+        .myTitle1 {
+            padding: 1rem 0;
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        .myTitle2 {
+            height: 110px;
+            font-size: x-large;
+            line-height: 130%;
+            font-weight: 500;
+
+            span {
+                color: $sub1;
+            }
+
+        }
+
+        .myInfo {
+            @include flexbox();
+            gap: 20px;
+            text-align: center;
+
+
+            p {
+                font-size: 14px;
+                margin: 0.8rem;
+            }
+
+
+            .myLv {
+                cursor: pointer;
+
+                >b {
+                    color: $main;
+                    background-color: #fff;
+                    padding: 5px 15px;
+                    border-radius: 15px;
+                }
+            }
+
+            .myPot {
+                b {}
+            }
+        }
+
+        .myImg {
+            position: absolute;
+            top: 160px;
+            right: calc(22% + 2rem);
+
+            >div {
+                width: 160px;
+                height: 160px;
+                background: #fff url(../../essets/charactor/CHO.svg) center center no-repeat;
+                background-size: cover;
+                border-radius: 50%;
+            }
+
+        }
+    }
+
+
+    .myPageContents {
+        max-width: calc(430px);
+        margin: 0 auto;
+        padding: 2rem;
+
+        .myTitleFlex {
+            @include flexbox(sb, c);
+            margin: 0.5rem 0;
+
+            h4 {}
+
+            span {
+                font-size: $s;
+                @include flexbox(c, c);
+            }
+        }
+    }
+
+    .studyThumb {
+        @include flexbox();
+        overflow: hidden;
+
+        figure {
+
+            >div {
+                width: 150px;
+                height: 120px;
+                margin-right: 10px;
+                flex-shrink: 0;
+                background: $grayLight;
+                border-radius: 9px;
+            }
+
+            figcaption {
+                padding: 5px 0;
+                font-size: $s;
+            }
+
+
+        }
+    }
+
+
+
+    .myCheck {
+        text-align: center;
+        padding: 20px;
+        border: 1px solid $grayLight;
+        border-radius: 9px;
+
+    }
+}
+
+.commuContents {
+
+    figure {
+        @include flexbox(c, c);
+        gap: 10px;
+        cursor: pointer;
+
+        >div {
+            @include flexbox(c, c);
+            width: 90px;
+            height: 76px;
+            margin: 0.5rem 0;
+            border-radius: 9px;
+            overflow: hidden;
+
+            img {
+                border-radius: 9px;
+            }
+        }
+
+        figcaption {
+            width: 50%;
+
+            >div {
+                display: inline-block;
+                font-size: $s;
+                background: $grayLight;
+                padding: 1px 10px;
+                border-radius: 10px;
+                color: #fff;
+            }
+
+            b {
+                display: block;
+                padding: 3px 0px;
+            }
+
+            p {
+                color: $grayLight;
+                font-size: $s
+            }
+        }
+
+        .heart {
+            @include flexbox(sb, c);
+            gap: 2px;
+
+            span {
+                margin: 0 2px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+//마이페이지 / 책갈피,커뮤니티
+
+.studyPage,
+.commuPage,
+.checkPage {
+    padding-top: 6rem;
+    color: $grayDark;
+
+    .studyTitle,
+    .commuTitle,
+    .checkTitle {
+        position: relative;
+
+        .backIcon {
+            position: absolute;
+            top: 0;
+            left: 2rem;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .commuContents .studyContents {
+        max-width: calc(480px - 2rem);
+        margin: 2rem auto;
+        justify-content: center;
+    }
+
+    .commuEmpty,
+    .studyEmpty {
+        @include column-flexbox(c, c);
+        margin: 5rem 0 2rem 0;
+
+        Image {}
+
+        p {}
+
+        div {
+            color: $grayLight;
+            padding: 0.5rem 1rem;
+            border: 1px solid $grayLight;
+            border-radius: 2rem;
+            margin: 1.5em;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+
+//마이페이지 / 출석체크 - 달력
+
+.monthCover {
+    color: $grayDark;
+    max-width: 430px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+
+
+    .month {
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $grayLight;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+
+        thead {
+            color: $gray;
+        }
+
+        th,
+        td {
+            padding: 1rem 0.5rem;
+            font-weight: normal;
+        }
+
+        tbody {
+            td {
+                color: $grayLight;
+            }
+        }
+    }
+
+    .iceCreamBtn {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 1rem 3rem;
+        border-radius: 3rem;
+        background-color: $main;
+        color: #fff;
+    }
+}

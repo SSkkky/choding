@@ -1,0 +1,19 @@
+@use '../../../styles/main' as *;
+
+#MyProjectTotal {
+    margin-top: 2rem;
+
+    @include flexbox();
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#Loading {
+    width: 100%;
+    height: 100%;
+
+    padding-top: 2rem;
+    @include flexbox(c, c);
+    font-size: $l;
+    color: $grayLight;
+}

@@ -1,0 +1,106 @@
+@use '../../styles/main' as *;
+
+#signUp {
+    color: $grayDark;
+    width: 100%;
+    max-width: calc(430px - 2rem);
+    padding: 8rem 1rem 1rem 1rem;
+    min-height: calc(100vh - 53px);
+    margin: 0 auto;
+    @include column-flexbox(s, c);
+    gap: 1rem;
+
+    header {
+        width: 100%;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $grayLight;
+
+        h2 {
+            font-size: $m;
+            text-align: center;
+        }
+    }
+
+    form {
+        width: 100%;
+        color: $gray;
+
+        @include column-flexbox;
+        gap: 1.5rem;
+
+        .field {
+            @include column-flexbox;
+            gap: 0.5rem;
+
+            label {
+                width: 100%;
+
+                b {
+                    font-size: $s;
+                }
+            }
+
+            .input-group {
+                @include flexbox(s, c);
+                gap: 1rem;
+                height: 40px;
+
+                input {
+                    border: 1px solid $grayLight;
+                    width: 100%;
+                    height: 100%;
+                    padding-left: 1rem;
+                }
+
+                input:focus {
+                    border-color: $main;
+                    box-shadow: 0 0 0.5rem 0 $main;
+                }
+
+                button {
+                    white-space: nowrap;
+                    width: 120px;
+                    height: 40px;
+                    border: 1px solid $gray;
+                    transition: 0.2s ease;
+
+                    &:hover {
+                        background-color: $main;
+                        border-color: $main;
+                        color: #fff;
+                        font-weight: 700;
+                        border-radius: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .actions {
+        margin-top: 2rem;
+        width: 100%;
+
+        button {
+            width: 100%;
+            padding: 1rem 0;
+            font-size: $b;
+            font-weight: 700;
+            background-color: $grayLight;
+            cursor: not-allowed;
+        }
+
+        button.on {
+            background-color: $main;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
+
+.errorMsg {
+    font-size: $s;
+
+    &.On {
+        color: red;
+    }
+}

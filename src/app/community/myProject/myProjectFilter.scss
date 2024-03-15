@@ -1,0 +1,69 @@
+@use '../../../styles/main' as *;
+
+.filterActive {
+    max-height: 2rem !important;
+}
+
+#myProjectFilter {
+    transition: 0.3s;
+    max-height: 20rem;
+    overflow: hidden;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $grayLight;
+
+    .myProjectFilterHeader {
+        @include flexbox(sb, c);
+        margin-bottom: 1rem;
+        position: relative;
+
+        .inputSearch {
+            background-color: $wGray;
+            padding: 0.5rem;
+            padding-left: 1rem;
+            border-radius: 1rem;
+        }
+
+        img {
+            position: absolute;
+            right: 0.75rem;
+        }
+
+        .filterTitle {
+            cursor: pointer;
+            font-size: $b;
+        }
+    }
+
+    .containerContents {
+        div b {
+            font-size: $s;
+            display: block;
+            color: $gray;
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            @include flexbox();
+            gap: 0.5rem;
+            flex-wrap: wrap;
+
+            li {
+                button {
+                    @include btnBase();
+                    text-wrap: nowrap;
+                }
+
+                .active {
+                    @include btnActive();
+                }
+            }
+        }
+
+        .filterTotalMember {}
+
+        .filterSkills {
+            margin-top: 1rem;
+        }
+    }
+}

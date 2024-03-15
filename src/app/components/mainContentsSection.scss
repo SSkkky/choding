@@ -1,0 +1,388 @@
+@use '../../styles/main' as *;
+
+// base
+.contentsBox {
+    padding: 2rem;
+    @include flexbox();
+    gap: 1rem;
+
+    .contLeft {
+        width: calc((100% - 4rem) / 3);
+        white-space: nowrap;
+        text-align: center;
+        @include column-flexbox(s, c);
+
+        .subtext {
+            font-size: $s;
+            color: $gray;
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            font-size: $m;
+            margin-bottom: 2rem;
+
+            span {
+                color: $main;
+            }
+        }
+
+        span {
+            @include inline-flexbox(s, c);
+
+            img {}
+        }
+
+        .more {
+            width: 100%;
+            font-size: $s;
+        }
+    }
+
+    .contRight {
+        // overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+
+        .title {
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+// 요즘 인기있는 강의(3)
+.contentsBox.num3 {
+    @include column-flexbox(c, c);
+
+    .contLeft {
+        width: 100%;
+        text-align: center;
+
+        .title {
+            margin-bottom: 0;
+        }
+
+        .more {
+            display: none;
+        }
+    }
+
+    .contRight {
+        max-width: 100%;
+        @include flexbox();
+        gap: 1rem;
+
+        figure {
+            @include flexbox(s, s);
+            width: 100%;
+            border: 2px solid $main;
+            border-radius: 1rem;
+            padding: 1rem;
+            height: 240px;
+
+            background: url('../../essets/charactor/CHO.svg');
+            background-repeat: no-repeat;
+            background-position: 80px -20px;
+            background-size: contain;
+
+            figcaption {
+                width: 100%;
+                @include column-flexbox(sb, s);
+
+                .figcaption {
+                    width: 100%;
+
+                    .top {
+                        .title {
+                            font-weight: 700;
+                        }
+                    }
+
+                    .author {
+                        font-size: $s;
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    margin-bottom: 1rem;
+                    width: 100%;
+                    height: 4.5rem;
+                }
+            }
+        }
+    }
+
+
+    .contentsBox.num1,
+    .contentsBox.num2 {
+        .contLeft {}
+
+        .contRight {
+            // width: calc((100% - 4rem) / 3 * 2);
+        }
+    }
+}
+
+// 유튜브(0)
+.contentsBox.num0 {
+    @include column-flexbox(c, c);
+    background-color: $wGray;
+
+    .contLeft {
+        width: 100%;
+        text-align: center;
+
+        .title {
+            margin-bottom: 0;
+        }
+
+        .more {
+            justify-content: flex-end;
+        }
+    }
+
+    .contRight {
+        max-width: 100%;
+        @include flexbox();
+        gap: 1rem;
+
+        figure {
+            @include column-flexbox(s, s);
+            width: calc((100% - 2rem) / 3);
+            border-radius: 1rem;
+            padding: 1rem;
+            height: 240px;
+            box-shadow: 0 0 10px 0 $grayLight;
+            background-color: #fff;
+
+            figcaption {
+                width: 100%;
+                @include column-flexbox(sb, s);
+
+                .figcaption {
+                    width: 100%;
+
+                    .author {
+                        font-size: $s;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .contentsBox.num1,
+    .contentsBox.num2 {
+
+        .contLeft {}
+
+        .contRight {
+            // width: calc((100% - 4rem) / 3 * 2);
+        }
+    }
+}
+
+// 구글(1)
+// 네이버(2)
+.contentsBox.num1,
+.contentsBox.num2 {
+    .contLeft {
+        text-align: left;
+        align-items: flex-start;
+        word-break: keep-all;
+        white-space: wrap;
+    }
+
+    .contRight {
+        width: calc(100% / 3 * 2);
+        @include flexbox();
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        .contentsFigure {
+            width: calc((100% - 1rem) / 2);
+        }
+    }
+}
+
+.contentsBox.num2 {
+    .contentsFigure {
+        border: 1px solid $main;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    .contentsFigure:nth-child(2) {
+        border-color: $sub2;
+    }
+
+    .contentsFigure:nth-child(3) {
+        border-color: $grayLight;
+    }
+}
+
+// 하단
+// 커뮤니티(4) 퀴즈(5)
+.bottomContents {
+    @include flexbox();
+
+    .contentsBox.num4 {
+        flex-direction: column;
+        width: calc((100% - 2rem) / 3 * 2);
+
+        .contLeft {
+            width: 100%;
+            align-items: flex-start;
+
+            .title {
+                margin: 0;
+            }
+
+            .more {
+                justify-content: flex-end;
+            }
+        }
+
+        .contRight {
+            @include flexbox();
+            gap: 1rem;
+
+            figure {}
+        }
+    }
+
+    #mainTodayQuiz {
+        padding: 2rem 0;
+        width: calc((100% - 2rem) / 3);
+
+        @include column-flexbox(sb, s);
+
+        .contLeft {
+            .subtext {
+                font-size: $s;
+                color: $gray;
+                margin-bottom: 0.5rem;
+            }
+
+            .title {
+                span {
+                    color: $main;
+                }
+            }
+        }
+
+        .contRight {
+            width: 100%;
+            height: 211px;
+            background-color: aqua;
+            border-radius: 0.5rem;
+            background: url(../../essets/dailyQuizBanner.svg);
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+        }
+    }
+}
+
+// 600px
+@include responsive(m) {
+
+    // 인기
+    .contentsBox.num3 {
+        .contRight {
+            flex-direction: column;
+
+            figure {
+                height: 140px;
+                background-position: 0;
+
+                figcaption {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+
+    // youtube
+    .contentsBox.num0 {
+        .contRight {
+            flex-direction: column;
+
+            .contentsFigure {
+                width: 100%;
+                height: 100%;
+
+                a {
+                    width: 100%;
+                    @include flexbox;
+                    gap: 1rem;
+
+                    img {
+                        width: 50%;
+                    }
+
+                    figcaption {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .contentsBox.num1 {
+        flex-direction: column;
+    }
+
+    .contentsBox.num2 {
+        flex-direction: column;
+    }
+
+
+    .contentsBox.num1,
+    .contentsBox.num2 {
+        .contLeft {
+            width: 100%;
+
+            .title {
+                margin: 0;
+            }
+
+            .more {
+                width: 100%;
+                justify-content: flex-end;
+            }
+        }
+
+        .contRight {
+            width: 100%;
+        }
+    }
+}
+
+@include responsive(s) {
+    .contentsBox {
+        padding: 2rem 1rem;
+    }
+
+    .bottomContents {
+        flex-direction: column;
+
+        .contentsBox.num4 {
+            width: 100%;
+        }
+
+        #mainTodayQuiz {
+            width: 100%;
+            padding: 1rem;
+
+            .contRight {
+                margin-top: 1rem;
+                height: 211px;
+                background-position: center bottom;
+            }
+        }
+    }
+}

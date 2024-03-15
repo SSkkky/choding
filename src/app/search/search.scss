@@ -1,0 +1,184 @@
+@use '../../styles/main' as *;
+
+#totalSearch {
+    padding: 2rem;
+    padding-top: calc(79px + 2rem);
+    color: $grayDark;
+
+    @include column-flexbox;
+    gap: 2rem;
+
+    // 검색 인풋
+    .totalSearchHeader {
+        @include column-flexbox(c, c);
+
+        #searchInputSub {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            width: 100%;
+            min-width: 10rem;
+            max-width: calc(430px - 2rem);
+            background-color: transparent;
+            // background: linear-gradient(to right, $sub1, $mainLight);
+
+            img {
+                position: absolute;
+            }
+
+            form {
+                width: 100%;
+
+                input {
+                    opacity: 1 !important;
+                    height: 100%;
+                    width: 100%;
+                    font-size: $b;
+                    border-bottom: 3px solid;
+                    border-image: linear-gradient(to right, $grayLight, $grayLight);
+                    border-image-slice: 1;
+                    padding-bottom: 0.5rem;
+                }
+
+                input:focus {
+                    border-bottom: 4px solid;
+                    border-image: linear-gradient(to right, $sub1, $mainLight);
+                    border-image-slice: 1;
+                    color: $grayDark;
+                }
+
+                input::placeholder {
+                    color: $grayLight;
+                    font-size: $b;
+                }
+            }
+        }
+
+        p {
+            margin-top: 2rem;
+            color: $gray;
+
+            span {
+                color: $grayDark;
+                font-weight: 700;
+            }
+        }
+    }
+
+    // 추천 검색어
+    .recommendQuery {
+        margin: 0 auto;
+        width: 100%;
+        min-width: 10rem;
+        max-width: calc(430px - 3rem);
+
+        h3 {
+            font-size: $s;
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            @include flexbox;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+
+            li {
+                transition: 0.2s ease;
+                color: $gray;
+                font-size: $s;
+                padding: 0.2rem 0.5rem;
+                border: 1px solid $grayLight;
+                border-radius: 1rem;
+                cursor: pointer;
+            }
+
+            li:hover {
+                background-color: $main;
+                border: 1px solid $main;
+                color: #fff;
+                font-weight: 700;
+            }
+        }
+    }
+
+    // "검색어" 검색 결과 안내
+    .checkQuery {
+        @include flexbox(c, c);
+        gap: 0.3rem;
+        margin-top: 2rem;
+
+        span {
+            position: relative;
+            z-index: 0;
+            font-weight: 700;
+            display: block;
+        }
+
+        span::before {
+            content: '';
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background-color: $sub1;
+        }
+    }
+
+
+    // 검색 결과
+    .totalSearchSection {
+        width: 100%;
+        padding-bottom: 3rem;
+
+        &:last-child {
+            border: 0;
+        }
+
+
+        .subheading {
+            font-weight: 700;
+            color: #000;
+            font-size: $s;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 0.5rem;
+            position: relative;
+            z-index: 0;
+        }
+
+        .innerResults {
+            @include flexbox();
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            .contentsFigure {
+                width: calc((100% - 2rem)/3);
+                padding-bottom: 1rem;
+                position: relative;
+
+                .study {
+                    // 스크랩 버튼
+                    position: absolute;
+                    right: 0.5rem;
+                    top: -0.5rem;
+
+                    width: 25px;
+                    height: 30px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive(s) {
+    #totalSearch .totalSearchSection .innerResults .contentsFigure {
+        width: calc((100% - 1rem) / 2);
+    }
+}

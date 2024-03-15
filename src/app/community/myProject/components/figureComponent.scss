@@ -1,0 +1,122 @@
+@use '../../../../styles/main' as *;
+
+
+#MyProjectTotal {
+    .communityFigure {
+        padding: 1rem;
+        width: calc((100% - 4rem)/3);
+        transition: 0.2s ease-in-out;
+
+        .noImage,
+        img {
+            width: 100%;
+            height: 110px;
+            border-radius: 0.5rem;
+            object-fit: cover;
+        }
+
+        .noImage {
+            background: url('../../../../essets/noImage2.png');
+            background-position: center center;
+        }
+
+        figcaption {
+            padding-top: 0.5rem;
+
+            .figcaption {
+                .top {
+                    height: 7rem;
+
+                    .goal {
+                        font-size: $s;
+                        color: $gray;
+                        font-weight: 700;
+                        position: relative;
+                        z-index: 0;
+
+                        &::after {
+                            content: '';
+                            width: 100%;
+                            height: 0.5rem;
+                            background-color: $sub1;
+
+                            position: absolute;
+                            z-index: -1;
+                            top: 0.5rem;
+                            left: 0;
+                        }
+                    }
+
+                    .title {
+                        padding-top: 1rem;
+                        font-size: $b;
+                        font-weight: 700;
+                    }
+
+                    .overview {
+                        font-size: $s;
+                        padding-top: 0.5rem;
+                        color: $gray;
+                        line-height: 140%;
+
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                    }
+                }
+
+                .bottom {
+                    font-size: $s;
+                    color: $gray;
+
+                    .comments,
+                    .likeNum {
+                        padding-left: 1rem;
+                    }
+
+                    .sub2 {
+                        margin-top: 0.5rem;
+
+                        .likeNum {
+                            color: $main;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            box-shadow: 0 0 10px 0 $grayLight;
+            border-radius: 0.5rem;
+            transform: translateY(-4px);
+        }
+    }
+
+    .myProjectNoData {
+        text-align: center;
+        color: $grayLight;
+        font-weight: 700;
+        width: 100%;
+        height: 30vh;
+        background: url('../../../../essets/empty.svg') no-repeat center;
+    }
+}
+
+@include responsive(l) {
+    #MyProjectTotal {
+        .communityFigure {
+            width: calc((100% - 3rem)/2);
+        }
+    }
+}
+
+@include responsive(520px) {
+    #MyProjectTotal {
+        .communityFigure {
+            width: 100%;
+        }
+    }
+}

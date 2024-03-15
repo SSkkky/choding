@@ -1,0 +1,124 @@
+@use '../../styles/main' as *;
+
+.containerContentsQnA {
+    margin:2rem 0 ;
+    display: grid;
+    padding: 0 2rem;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 70px);
+    grid-template-areas: 
+            "b a c"
+            "b a c"
+            "b a c"
+    ;
+    align-items: end;
+    @include responsive('m'){
+        grid-gap: 0.5rem;
+        grid-template-rows: repeat(3, 350px);
+        grid-template-areas: 
+        "a a a"
+        "b b b"
+        "c c c"
+;
+    }
+    .QnABsetContainer {
+        box-shadow: 3px 4px 30px rgba(0, 0, 0, 10%);
+        border-radius: 9px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        &::after{
+            font-weight: bold;
+            position: absolute;
+            right: 0%;
+            top: 0%;
+            color: $main;
+            @include responsive('m'){
+                right: 3%; top: 0;
+                display: flex;
+            }
+        }
+        @include responsive('s'){
+            width: 100%;
+        }
+        &:nth-child(1){
+            grid-area: a;
+            height: 100%;
+            &::after{
+                content: '1';
+                font-size: 5rem;
+                @include responsive('m'){
+                    font-size: 5rem;
+                }
+                @include responsive('s'){
+                    font-size: 5rem;
+                }
+            }
+        }
+        &:nth-child(2){
+            grid-area: b;
+            height: 90%;
+            &::after{
+                content: '2';
+                font-size: 5rem;
+                @include responsive('m'){
+                    font-size: 4rem;
+                }
+                @include responsive('s'){
+                    font-size: 4rem;
+                }
+            }
+        }
+        &:nth-child(3){
+            grid-area: c;
+            height: 90%;
+            &::after{
+                content: '3';
+                font-size: 5rem;
+                @include responsive('m'){
+                    font-size: 4rem;
+                }
+                @include responsive('s'){
+                    font-size: 4rem;
+                }
+            }
+        }
+        img{
+           width: 100%; height: 65%;
+           object-fit: cover;
+           &:nth-child(1){
+            height: 67%;
+           }
+        }
+        .BestContent {
+            padding: 9px;
+            display: block;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            .contentBox{
+                padding-bottom: $s;
+                overflow: hidden;
+                .title {
+                    font-weight: bold;
+                    font-size: $s;
+                }
+                .content{
+                    font-size: $t;
+                    color: $gray;
+                    white-space: normal;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+            }
+            .Name {
+                font-size: $t;
+                color: $gray;
+            }
+        }
+    }
+}
