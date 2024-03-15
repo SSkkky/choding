@@ -9,7 +9,7 @@ import detailStore from '@/lib/server/detailStore';
 import swal from 'sweetalert';
 import Image from 'next/image';
 import { myQnAType, myQnACommenttype, myQnACommentValue } from '@/types/datatype';
-import DetailComment from './detailComment';
+import DetailComment from './DetailComment';
 import empty from '@/essets/empty.svg';
 import dumi from '@/essets/charactor/CHO.svg'
 
