@@ -2,6 +2,7 @@
 //              메인 교육
 "use client";
 import './home.scss';
+import Head from 'next/head';
 import axios from 'axios';
 import { useQuestion } from '@/context/questionStore';
 import { useSession } from 'next-auth/react';
@@ -99,7 +100,11 @@ export default function Home() {
 
 
   return (
-    <main className="mainContainer">
+    <>
+    <Head>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+      </Head>
+      <main className="mainContainer">
       <MainBanner
         title={title}
       />
@@ -142,9 +147,7 @@ export default function Home() {
           <div className="contRight" onClick={() => { isOpenFunc({ isOpen: true, isTest: false }) }}></div>
         </section>
       </section>
-
-
     </main>
-
+    </>
   );
 }
