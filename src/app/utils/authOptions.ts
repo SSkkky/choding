@@ -6,7 +6,6 @@ import { saveUserToMongoDB } from '@/app/utils/saveUserToMongoDB';
 
 export const authOptions: NextAuthOptions = {
     secret: process.env.NEXTAUTH_SECRET,
-    url: process.env.NEXTAUTH_URL,
     providers: [
         GitHubProvider({
             clientId: process.env.NEXT_PUBLIC_GITHUB_ID as string,
