@@ -44,14 +44,30 @@ export default function HeaderMenu({ active, setActive, onClickMenu }: headerMen
                         ></Image>
                     </button>
                     <div className='loginCont'>
-                        {status === 'authenticated' ? <p style={loginContStyle}><span className='userName'>{session?.user?.name}</span>님<br />어서오세요!</p> : <Link href="/login" onClick={onClickMenu}>
+                        {
+                            status === 'authenticated'
+                                ? <div className='onSessionUser'>
+                                    <Image
+                                        src={session?.user?.image as string}
+                                        alt='프로필 이미지'
+                                        width={40}
+                                        height={40}
+                                    />
+                                        <p style={loginContStyle}>
+                                            <span className='userName'>
+                                                {session?.user?.name}
+                                            </span>님<br />어서오세요!
+                                        </p>
+                                    </div>
+                            : <Link href="/login" onClick={onClickMenu}>
                             <b>로그인 해주세요</b>
                             <Image
                                 src={ArrowRight}
                                 alt='arrow image'
                                 width={20} height={20}
-                            ></Image>
-                        </Link>}
+                            />
+                                </Link>
+                        }
                     </div>
                     <ul className='headerMenuGroup'>
                         <li>

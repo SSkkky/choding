@@ -2,7 +2,7 @@
 
 import serverStore from '@/lib/server/serverStore';
 import { useEffect, useState } from 'react';
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 import './mypage.scss';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -12,10 +12,13 @@ import arrowRight from '@/essets/arrowRight.svg';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useQuestion } from '@/context/questionStore';
-import { myProjectPostType, myQnAType } from '@/types/datatype';
+import { myProjectPostType, myQnAType, myStudyType } from '@/types/datatype';
 import { userPointType } from '@/types/user';
-import MyCommunityContents from './community/commponents/Contents';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 
 export default function MyPage() {
@@ -27,6 +30,17 @@ export default function MyPage() {
     const router = useRouter();
     const [project, setProject] = useState([]);
     const [qna, setQnA] = useState([]);
+    const [studyData, setStudyData] = useState<myStudyType[]>([]);
+    const [slideNum, setNum] = useState<number>(2.5);
+
+    useEffect(() => {
+        const handleResize = () => {
+            window.innerWidth < 430 ? setNum(2.2) : setNum(2.5)
+        };
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
 
 
@@ -82,6 +96,7 @@ export default function MyPage() {
     useEffect(() => {
         fetchProject();
         fetchQnA();
+        fetchMyStudy()
     }, [session]);
 
 
@@ -134,6 +149,27 @@ export default function MyPage() {
 
 
     combinedData.sort((a, b) => b.postId - a.postId);    // postId 기준 정렬
+
+
+
+
+    const fetchMyStudy = async () => { //내 책갈피(myStudy) 불러오기
+        try {
+            const res = await serverStore('get', 'myStudy', null, null);
+            if (res) {
+                const getstudy = res.data.filter((obj: myStudyType) => obj.email === session?.user?.email);
+                // console.log("====================")
+                // console.log(getstudy)
+                // console.log("====================")
+                setStudyData(getstudy);
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+
+
 
 
 
@@ -192,21 +228,26 @@ export default function MyPage() {
                         </Image>
                     </span>
                 </div>
+
+
                 <div className='studyThumb'>
-                    <figure>
-                        <div></div>
-                        <figcaption>컨텐츠 타이틀을 ..</figcaption>
-                    </figure>
 
-                    <figure>
-                        <div></div>
-                        <figcaption>컨텐츠 타이틀을 ..</figcaption>
-                    </figure>
-
-                    <figure>
-                        <div></div>
-                        <figcaption>컨텐츠 타이틀을 ..</figcaption>
-                    </figure>
+                    <Swiper
+                        slidesPerView={slideNum}
+                        spaceBetween={18}
+                        modules={[Pagination]}
+                        className="mySwiper"
+                    >
+                        {studyData.map((data, i) => (
+                            <SwiperSlide key={i}>
+                                <figure className='contentsFigure' key={data.study.resourceId.videoId}>
+                                    <a href={`https://www.youtube.com/watch?v=${data.study.resourceId.videoId}`} target='_blank'>
+                                        <img src={data.study.thumbnails.medium ? data.study.thumbnails.medium?.url : data.study.thumbnails.default.url} alt="썸네일 이미지" />
+                                    </a>
+                                </figure>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
             </article>
 
@@ -236,11 +277,11 @@ export default function MyPage() {
                                 {
                                     data?.image ?
                                         <div>
-                                            <Image src={data?.image} alt='이미지' width={90} height={76} />
+                                            <Image src={data?.image} alt='이미지' width={120} height={100} />
                                         </div>
                                         :
                                         <div>
-                                            <Image src={noImage} alt='이미지' width={0} height={76} objectFit="cover" />
+                                            <Image src={noImage} alt='이미지없음' width={120} height={100} />
                                         </div>
                                 }
 

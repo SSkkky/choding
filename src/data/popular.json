@@ -44,7 +44,7 @@
     {
             "publishedAt": "2024-03-05T04:31:25Z",
             "channelId": "UCKyo9kgz1AvXemrh_6WJiSQ",
-            "title": "프론트엔드 개발자가 Next.js를 반드시 배워야하는 이유 l 구조, 강점, 현직 활용 Tips",
+            "title": "프론트엔드 개발자가 Next.js를 반드시 배워야하는 이유",
             "description": "#nextjs #프론트엔드 #코딩\n\n요즘 프론트엔드 다루는 분들이라면 Next.js 많이 들어보셨을 텐데요.\n\n오늘은 Next.js에 대한 모든 것들을 정리해봤습니다.\n\n▶출연문의 contact us (현직자 개인 브랜딩 / 책홍보 / 영상홍보 / 회사홍보)\r\nsupport@mcode.co.kr\r\n\r\n▶메타코드M  오픈채팅방 초대받기 (IT 뉴스/ 참여 Event\nsupport@mcode.co.kr 이메일 보내주세요\r\n\r\n▶메타코드M 사이트 회원가입해서, 강의자료 받기\r\nmcode.co.kr",
             "thumbnails": {
                 "default": {
@@ -86,7 +86,7 @@
     {
             "publishedAt": "2024-03-05T04:31:32Z",
             "channelId": "UCKyo9kgz1AvXemrh_6WJiSQ",
-            "title": "Next 14 강좌가 출시되었습니다!! (React-Query@5, MSW@2, Next-Auth@5, 서버 액션 포함!!)",
+            "title": "Next 14 강좌가 출시되었습니다!!",
             "description": "강의 구매 링크\nhttps://inf.run/cHgst\nhttps://inf.run/cHgst\n\n유튜브에서 라이브 진행한 부분은 강의의 1/3 밖에 안 됩니다.\n\n4만명이 수강한 제로초 강좌/로드맵 통합 링크!\nhttps://www.zerocho.com/lecture\nhttps://www.zerocho.com/lecture\n\n의지력이 약해 다른 사람들과 함께 수강하고 싶다면! + 고민상담, 질문도 하고 싶다면\n2천명이 모여있는 제로초스쿨에서!\nhttps://www.zerocho.com/slack\nhttps://www.zerocho.com/slack\n\n-- 깃헙 --\nhttps://github.com/zerocho (레포지토리 스타 눌러주세요)\n-- 후원 및 멤버십 --\nhttps://toon.at/donate/zerocho\nhttps://www.youtube.com/channel/UCp-vBtwvBmDiGqjvLjChaJw/join\n-- 소개 --\nNode.js 교과서, Let's Get IT 자바스크립트 프로그래밍, 타입스크립트 교과서 저자\n제로초닷컴(ZeroCho.com) 운영자",
             "thumbnails": {
                 "default": {
@@ -249,7 +249,7 @@
     {
             "publishedAt": "2024-03-05T04:32:19Z",
             "channelId": "UCKyo9kgz1AvXemrh_6WJiSQ",
-            "title": "리액트 vs Next JS vs Gatsby 언제 뭘 써야하지? | CSR vs SSR vs SSG 내 프로젝트 분석하고 맞는 기술스택 선택하는법!",
+            "title": "리액트 vs Next JS vs Gatsby 언제 뭘 써야하지?",
             "description": "프로젝트 분석하고 맞는 기술스택 선택하는법! \n요즘 핫하다는 리액트 vs Gatsby vs Nextjs \n어떤 상황에서 어떤걸 쓰는게 좋을까?\n\n00:00 상황극\n00:25 인트로\n01:51 프로젝트를 받았을때 생각해야 하는것\n04:27 기술스택 선택하는법 (CSR vs SSG vs SSR)\n11:37  CMS를 사용해야하는 경우\n12:46 그래서 초보자인 나는 뭘 배워야 하지?\n13:24  리액트 배우는 곳  추천\n13:34 당부의 말씀\n\n리액트 강의 듣는곳 \nhttps://codingnoona.thinkific.com/courses/3\n뇌를 살찌우러 올래?\n\n누나 인스타 뭐야? 1008_shine",
             "thumbnails": {
                 "default": {
@@ -291,7 +291,7 @@
     {
             "publishedAt": "2024-03-05T04:33:15Z",
             "channelId": "UCKyo9kgz1AvXemrh_6WJiSQ",
-            "title": "Next.js 나만의 포트폴리오 사이트 만들기 (개발하는 김에 배포까지) / LottieFiles, Notion Api, TailwindCSS",
+            "title": "Next.js 나만의 포트폴리오 사이트 만들기",
             "description": "📌 내용\n- Next.js\n- Lottie Animation\n- Notion api integration\n- TailwindCSS\n- Vercel deploy\n\n👇 완성 소스코드\nhttps://github.com/TuenTuenna/next-portfolio-tutorial\n\n👇완성 포트폴리오 사이트\nhttps://next-portfolio-tutorial-hyioyx9rt-tuentuenna.vercel.app/\n\n📺수강기록을 남기고 싶으시면 아래에서 수강해보세요!\nhttps://ppak-coders.teachable.com/\n\n⏰ 타임스탬프\n===================================================\n0:00 인트로\n0:12 강의소개\n2:03 개발환경 설정\n2:27 Next.js 소개\n2:48 SSR 및 CSR 개념설명\n9:04 Next.js 설치 및 페이지 설정\n17:45 푸터, 해더 설정\n24:37 TailwindCSS 설정   \n30:29 레이아웃 설정   \n40:31 로티 애니메이션 적용   \n48:35 Link 작업   \n55:21 다크 모드 지원작업   \n1:17:10 노션 API 설명   \n1:35:15 Next.js 데이터 가져오기   \n1:52:21 Project 화면 만들기   \n2:28:16 배포하기   \n2:37:06\n===================================================\n\n부족한 제 채널을 구독해 주시고 꾸준히 영상을 시청해 주셔서\n너무너무 감사합니다! \n앞으로 더 노력하는 정대리가 되겠습니다! 🥰\n\n🍎 iOS 처음이신분 오세요! \nhttps://youtu.be/UKknl2yxQr4\n\n🎁 맴버쉽 혜택 및 iOS UIKit 강좌 안내\nhttps://youtu.be/FCFCKs9EAmA\n\n👍 진정빡코더 🔥👨‍💻 가입하고 유료 iOS 컨텐츠 보기https://www.youtube.com/channel/UCutO2H_AVmWHbzvE92rpxjA/join\n\n🔥진정 빡코더 맴버쉽 안내\nhttps://spangle-wedelia-2dc.notion.site/6198cd9c2d8840a5ab8d2758abf6a6d4\n\n개발하는 정대리 가 궁금하다면? 🔥\nhttp://ppak-coders.com/\n\n개발하는 정대리 빡코딩방👩🏼‍💻🔥 (비번: 1016)\nhttps://open.kakao.com/o/gxOOKJec\n\n영상이 도움이 되셨다면  구독과 좋아요는 저에게 큰 힘이 됩니다!🥰",
             "thumbnails": {
                 "default": {

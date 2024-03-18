@@ -28,7 +28,9 @@ export default function StudyPage() {
                 </p>
                 <h3>내 책갈피</h3>
             </div>
-            <MyStudyContents />
+            <div className='studyContentsBack'>
+                <MyStudyContents />
+            </div>
         </section>
     );
 }

@@ -6,8 +6,8 @@ import dynamic from 'next/dynamic';
 import { useSession } from 'next-auth/react';
 import swal from 'sweetalert';
 
-const AllPage = dynamic(() => import('./AllPage'), { ssr: false });
-const MyPage = dynamic(() => import('./MyPage'), { ssr: false });
+const AllPage = dynamic(() => import('./allPage'), { ssr: false });
+const MyPage = dynamic(() => import('./myPage'), { ssr: false });
 
 export default function QnA() {
     

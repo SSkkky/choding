@@ -30,8 +30,8 @@ export default function Naver({ query }: naverSearchType) {
             const response = await axios.get('/api/naver', { params: { q: query } });
             const items = response.data.items.map((item: any) => ({
                 ...item,
-                title: item.title.replace(/(<([^>]+)>)/ig, ""),
-                description: item.description.replace(/(<([^>]+)>)/ig, "")
+                title: item.title.replace(/(<([^>]+)>|&lt;|&gt;|&nbsp;|&amp;|&quot;)/ig, ""),
+                description: item.description.replace(/(<([^>]+)>|&lt;|&gt;|&nbsp;|&amp;|&quot;)/ig, "")
             }));
             setBlog(items);
         } catch (error) {

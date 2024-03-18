@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { useRouter } from 'next/navigation';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -14,6 +15,7 @@ import popularJsonData from '@/data/popular.json';
 
 export default function MainSlide() {
     const [slideNum, setNum] = useState<number>(3.2);
+    const router = useRouter();
 
     useEffect(() => {
         const handleResize = () => {
@@ -23,6 +25,10 @@ export default function MainSlide() {
 
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    const moveLink = (link: string) => {
+        router.push(`https://www.youtube.com/watch?v=${link}`)
+    }
 
     return (
         <section className='contentsBox' id="mainPopularSlide">
@@ -53,11 +59,12 @@ export default function MainSlide() {
                         return <SwiperSlide
                             className='contentsFigure'
                             key={item.publishedAt}
-                            style={{ backgroundImage: `url(${item.thumbnails.medium.url})` }}>
+                            style={{ backgroundImage: `url(${item.thumbnails.medium.url})` }}
+                            onClick={() => { moveLink(item.resourceId.videoId) }}
+                        >
                             <div className='innerContents'>
                                 <span>#{item.videoOwnerChannelTitle}</span>
                                 <h3 className='title'>{item.title}</h3>
-
                             </div>
                         </SwiperSlide>
                     })

@@ -23,15 +23,14 @@
 
 .headerBG {
     @include column-flexbox(c, s);
-    padding: 1rem 2rem 2rem 0;
+    padding: 1.5rem 2rem 2rem 0;
     position: absolute;
     top: 0;
     left: -2rem;
     padding-left: 2rem;
     z-index: 10;
     width: 100%;
-    min-width: 40%;
-    max-width: 70%;
+    max-width: calc(50% + 2rem);
     height: 100vh;
     background-color: #fff;
 
@@ -46,9 +45,31 @@
             padding-bottom: 1rem;
             border-bottom: 1px solid $grayLight;
 
+            .onSessionUser {
+                @include flexbox;
+                gap: 1rem;
+                position: relative;
+                z-index: 0;
+
+                img {
+                    border-radius: 50%;
+                    box-shadow: 0 0 0.5rem 0 $main;
+                }
+
+                &::after {
+                    width: 10px;
+                    height: 10px;
+                    content: '💚';
+                    position: absolute;
+                    top: 1.2rem;
+                    left: 1.5rem;
+                    z-index: 11;
+                }
+            }
+
             .userName {
                 color: $main;
-                font-size: 700;
+                font-weight: 700;
             }
 
             a {
@@ -60,6 +81,12 @@
                     font-weight: 400;
                     color: $grayLight;
                 }
+            }
+        }
+
+        button {
+            img {
+                transform: translate(-3px, -3px)
             }
         }
     }
@@ -121,6 +148,29 @@
         .signUp {
             font-weight: 700;
             color: $main;
+            cursor: pointer;
         }
+    }
+}
+
+@include responsive(m) {
+    .headerBG {
+        max-width: 80%;
+        height: 100svh;
+    }
+}
+
+@include responsive(s) {
+    #HeaderMenu {
+        width: 100svw;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .headerBG {
+        max-width: 100%;
+        height: 100svh;
     }
 }

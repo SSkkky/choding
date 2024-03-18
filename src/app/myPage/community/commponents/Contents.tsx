@@ -94,7 +94,7 @@ export default function MyCommunityContents() {
 
 
     return (
-        <div className='' >
+        <div>
             {combinedData.map((data, index) => (
                 <div className='commuContents' key={index} >
 
@@ -109,11 +109,11 @@ export default function MyCommunityContents() {
                         {
                             data?.image ?
                                 <div>
-                                    <Image src={data?.image} alt='이미지' width={90} height={76} />
+                                    <Image src={data?.image} alt='이미지' width={120} height={100} />
                                 </div>
                                 :
                                 <div>
-                                    <Image src={noImage} alt='이미지' width={0} height={76} objectFit="cover" />
+                                    <Image src={noImage} alt='이미지' width={0} height={100} objectFit="cover" />
                                 </div>
                         }
 

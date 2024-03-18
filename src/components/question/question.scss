@@ -110,6 +110,7 @@
                 }
             }
 
+
             .popUpBtn {
                 // margin-top: 36px;
                 width: 100%;
@@ -217,4 +218,21 @@
             background: #fff url(../../essets/oxPopupCharactor02.png) 100% 85% no-repeat;
         }
     }
+
+    .popUpCloseBtn {
+        position: absolute;
+        right: calc(50% - 180px);
+        top: calc(50% - 270px);
+        z-index: 1;
+
+        input {
+            margin: 0 0.5rem;
+        }
+    }
+}
+
+.popUpCloseBtn {
+    color: #fff;
+    font-size: $s;
+    @include flexbox(c, c);
 }

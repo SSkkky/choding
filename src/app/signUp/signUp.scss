@@ -5,7 +5,7 @@
     width: 100%;
     max-width: calc(430px - 2rem);
     padding: 8rem 1rem 1rem 1rem;
-    min-height: calc(100vh - 53px);
+    height: calc(100svh - 52px);
     margin: 0 auto;
     @include column-flexbox(s, c);
     gap: 1rem;

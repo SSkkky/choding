@@ -9,6 +9,7 @@ import './MyProjectWrite.scss';
 import FilterComponent from './components/FilterComponent';
 import InputSection from './components/InputSection';
 import serverStore from '@/lib/server/serverStore';
+import detailStore from '@/lib/server/detailStore';
 import { useSession } from 'next-auth/react';
 import swal from 'sweetalert';
 import dayjs from 'dayjs';
@@ -18,6 +19,7 @@ type FieldName = keyof myProjectPostType;
 
 export default function MyProjectWrite() {
     const { data: session, status } = useSession();
+    const [isOnUpdate, setIsOnUpdate] = useState(false);
     const router = useRouter();
 
     dayjs.locale('ko');
@@ -25,33 +27,6 @@ export default function MyProjectWrite() {
 
     const [pid, setPid] = useState<number>(0);
     let checkResult: myProjectPostType[] = [];
-
-    useEffect(() => {
-        if (status !== 'authenticated') { // 비회원 글쓰기 방지
-            swal("로그인해주세요!", "비회원은 글을 작성할 수 없습니다.", "warning")
-            router.push('/login');
-        }
-
-        async function fetchData() {
-            await dataCrl('get');
-            const maxId = checkResult.reduce(
-                (max, item) => item.postId > max ? item.postId : max,
-                checkResult[0].postId
-            )
-            setPid(Number(maxId + 1));
-            setValue('postId', Number(maxId + 1));
-        }
-        fetchData();
-    }, []);
-
-
-    // 데이터 가져오기 :)
-    async function dataCrl(type: string) {
-        const res = await serverStore(type, 'myProject');
-        if (res !== null) {
-            checkResult = res.data;
-        }
-    }
 
     const { formState: { errors }, register, watch, setValue, handleSubmit: handleFormSubmit } = useForm<myProjectPostType>({
         defaultValues: {
@@ -71,6 +46,70 @@ export default function MyProjectWrite() {
             email: session?.user?.email,
         },
     });
+
+
+    useEffect(() => {
+        if (status !== 'authenticated') { // 비회원 글쓰기 방지
+            swal("로그인해주세요!", "비회원은 글을 작성할 수 없습니다.", "warning")
+            router.push('/login');
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlPostId = urlParams.get('postId');
+
+        if (urlPostId) { // 게시글 수정이면
+            setIsOnUpdate(true)
+            // console.log('게시글을 수정합니다.')
+            detailStore('get', 'myProject', null, Number(urlPostId))
+                .then((res) => {
+                    // console.log(res)
+                    setValue('date', res?.data.date)
+                    setValue('overview', res?.data.overview)
+                    setValue('position', res?.data.position)
+                    setValue('postId', res?.data.postId)
+                    setValue('title', res?.data.title)
+                    setValue('goal', res?.data.goal)
+                    setValue('link', res?.data.link)
+                    setValue('member', res?.data.member)
+                    setValue('stack', res?.data.stack)
+                    setValue('image', res?.data.image)
+                    setValue('like', res?.data.like)
+                    setValue('comments', res?.data.comments)
+                    setValue('name', res?.data.name)
+                    setValue('email', res?.data.email)
+                    setImgText('이미지 업로드 완료')
+
+                    const activeArray = [];
+                    activeArray.push(...res?.data.position, ...res?.data.member, ...res?.data.stack)
+                    setActiveOptions(activeArray)
+                })
+                .catch((error) => {
+                    console.error('Error fetching data:', error);
+                });
+            return
+        }
+
+        async function fetchData() {
+            await dataCrl('get');
+            const maxId = checkResult.reduce(
+                (max, item) => item.postId > max ? item.postId : max,
+                checkResult[0].postId
+            )
+            setPid(Number(maxId + 1));
+            setValue('postId', Number(maxId + 1));
+        }
+        fetchData();
+    }, []);
+
+    // 데이터 가져오기 :)
+    async function dataCrl(type: string) {
+        const res = await serverStore(type, 'myProject');
+        if (res !== null) {
+            checkResult = res.data;
+        }
+    }
+
+
     const [activeOptions, setActiveOptions] = useState<string[]>([]);
     const [isOnButtonActive, setisOnButtonActive] = useState(false);
     const filterRef = useRef<HTMLHeadingElement | null>(null);
@@ -78,7 +117,7 @@ export default function MyProjectWrite() {
 
 
     // 이미지 주소 저장
-    const imageSubmit = async (event:any) => {
+    const imageSubmit = async (event: any) => {
         event.preventDefault();
         setImgText('파일 선택')
 
@@ -121,10 +160,12 @@ export default function MyProjectWrite() {
 
     // 폼 전송
     const onSubmit = async (data: myProjectPostType) => {
-        // console.log('------------data------------')
-        // console.log(data)
-        await serverStore('post', 'myProject', data);
-        router.push('/community/myProject');
+        if (isOnUpdate) {
+            await serverStore('put', 'myProject', data, data.postId);
+        } else {
+            await serverStore('post', 'myProject', data);
+        }
+        router.push(`/community/myProject/${data.postId}`);
     };
 
     return (
@@ -136,7 +177,7 @@ export default function MyProjectWrite() {
                 <input type="hidden" {...register('email')} />
                 <input type="hidden" {...register('name')} />
                 <section id="writeHeader">
-                    <h4>새 프로젝트 작성</h4>
+                    <h4>{isOnUpdate ? '게시글을 수정합니다' : '새 프로젝트 작성'}</h4>
                     <input
                         {...register('title', {
                             required: '*필수 입력 사항입니다!',
@@ -211,7 +252,7 @@ export default function MyProjectWrite() {
                 </section>
                 <section className='submit'>
                     <button type="button" className='back' onClick={onClickBackHandler}>취소</button>
-                    <button type="submit" className='confirm'>등록</button>
+                    <button type="submit" className='confirm'>{isOnUpdate ? '수정' : '등록'}</button>
                 </section>
             </form>
         </section>

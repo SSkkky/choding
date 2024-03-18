@@ -27,15 +27,14 @@
             }
         }
 
-        span {
-            @include inline-flexbox(s, c);
-
-            img {}
-        }
-
-        .more {
+        .moreCont {
             width: 100%;
-            font-size: $s;
+            @include inline-flexbox(e, c);
+
+            .more {
+                font-size: $s;
+                @include inline-flexbox(e, c);
+            }
         }
     }
 
@@ -114,16 +113,6 @@
             }
         }
     }
-
-
-    .contentsBox.num1,
-    .contentsBox.num2 {
-        .contLeft {}
-
-        .contRight {
-            // width: calc((100% - 4rem) / 3 * 2);
-        }
-    }
 }
 
 // 유튜브(0)
@@ -172,17 +161,6 @@
             }
         }
     }
-
-
-    .contentsBox.num1,
-    .contentsBox.num2 {
-
-        .contLeft {}
-
-        .contRight {
-            // width: calc((100% - 4rem) / 3 * 2);
-        }
-    }
 }
 
 // 구글(1)
@@ -194,6 +172,10 @@
         align-items: flex-start;
         word-break: keep-all;
         white-space: wrap;
+
+        .moreCont {
+            justify-content: flex-start;
+        }
     }
 
     .contRight {
@@ -249,8 +231,6 @@
         .contRight {
             @include flexbox();
             gap: 1rem;
-
-            figure {}
         }
     }
 

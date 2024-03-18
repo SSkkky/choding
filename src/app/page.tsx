@@ -40,8 +40,8 @@ export default function Home() {
 
   useEffect(() => {
     if (status === 'authenticated') {
-      console.log('-----------------session')
-      console.log(session.user)
+      // console.log('-----------------session')
+      // console.log(session.user)
       loadData()
     }
 
@@ -66,9 +66,9 @@ export default function Home() {
       return;
     };
 
-    console.log('-----------------nowUser')
-    console.log(nowUser)
-    console.log('------------------------')
+    // console.log('-----------------nowUser')
+    // console.log(nowUser)
+    // console.log('------------------------')
 
     switch (nowUser.level) {
       case '초딩':
@@ -101,53 +101,53 @@ export default function Home() {
 
   return (
     <>
-    <Head>
+      <Head>
         <link rel="preconnect" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
       </Head>
       <main className="mainContainer">
-      <MainBanner
-        title={title}
-      />
-      <MainSlide />
-      <MainContentsSection
-        option={0}
-        subtext={'동영상으로 차근차근'}
-        title={title[0]}
-        result={result?.youtube}
-      />
-
-      <MainContentsSection
-        option={1}
-        subtext={'기본부터 쌓아가요'}
-        title={title[1]}
-        result={result?.google}
-      />
-
-      <MainContentsSection
-        option={2}
-        subtext={'자세히 알아봐요'}
-        title={title[2]}
-        result={result?.naver}
-      />
-
-      <section className="bottomContents">
-        <MainContentsSection
-          option={4}
-          subtext={'모두와 공유해요'}
-          title={'커뮤니티'}
-          result={community as levelDataYoutube[]}
+        <MainBanner
+          title={title}
         />
-        <section id="mainTodayQuiz" className="num5">
-          <div className='contLeft'>
-            <p className='subtext'>열심히 공부했다면?</p>
-            <h3 className='title'>오늘의
-              <span>&nbsp;퀴즈</span>
-            </h3>
-          </div>
-          <div className="contRight" onClick={() => { isOpenFunc({ isOpen: true, isTest: false }) }}></div>
+        <MainSlide />
+        <MainContentsSection
+          option={0}
+          subtext={'동영상으로 차근차근'}
+          title={title[0]}
+          result={result?.youtube}
+        />
+
+        <MainContentsSection
+          option={1}
+          subtext={'기본부터 쌓아가요'}
+          title={title[1]}
+          result={result?.google}
+        />
+
+        <MainContentsSection
+          option={2}
+          subtext={'자세히 알아봐요'}
+          title={title[2]}
+          result={result?.naver}
+        />
+
+        <section className="bottomContents">
+          <MainContentsSection
+            option={4}
+            subtext={'모두와 공유해요'}
+            title={'커뮤니티'}
+            result={community as levelDataYoutube[]}
+          />
+          <section id="mainTodayQuiz" className="num5">
+            <div className='contLeft'>
+              <p className='subtext'>열심히 공부했다면?</p>
+              <h3 className='title'>오늘의
+                <span>&nbsp;퀴즈</span>
+              </h3>
+            </div>
+            <div className="contRight" onClick={() => { isOpenFunc({ isOpen: true, isTest: false }) }}></div>
+          </section>
         </section>
-      </section>
-    </main>
+      </main>
     </>
   );
 }

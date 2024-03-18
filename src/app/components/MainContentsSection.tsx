@@ -33,13 +33,17 @@ export default function Home({ subtext, title, option, result }: HomeType) {
                     {option === 4 ? null : ' 강의'}
                 </h3>
                 {
-                    option !== 4 ? <span className='more' onClick={() => { clickMore(title) }}>더보기
+                    option !== 4
+                        ? <div className='moreCont'>
+                            <button className='more' onClick={() => { clickMore(title) }}>더보기
                         <Image
                             src={ArrowRight}
                             alt='arrow image'
                             width={20} height={20}
                         />
-                    </span> : null
+                        </button>
+                    </div>
+                    : null
                 }
             </div>
             <div className="contRight">

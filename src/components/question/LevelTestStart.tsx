@@ -15,6 +15,7 @@ export default function LevelTestStart({ startTest }: any) {
     const { quiz, isOpenFunc } = useQuestion();
 
 
+
     const router = useRouter();
     function mypageGoGo() {
         isOpenFunc({ isOpen: false, isTest: false })
@@ -22,7 +23,9 @@ export default function LevelTestStart({ startTest }: any) {
     }
 
 
+
     useEffect(() => {
+
         axios.get(`/api/mypoint?email=${session?.user?.email}`)
             .then(res => {
                 // console.log(res.data)
@@ -30,7 +33,12 @@ export default function LevelTestStart({ startTest }: any) {
                     setMypageData(res.data[0]);
                 }
             });
+
     }, [session])
+
+
+
+
 
     return (
         <div>
@@ -64,9 +72,13 @@ export default function LevelTestStart({ startTest }: any) {
                         <button className='popUpBtn' onClick={() => { startTest(2) }}>테스트 시작하기</button>
                     }
 
-
                 </div>
             </div>
+
+            <label className='popUpCloseBtn'>
+                <input type="checkbox" />
+                하루동안 열지 않기
+            </label>
         </div>
 
     )

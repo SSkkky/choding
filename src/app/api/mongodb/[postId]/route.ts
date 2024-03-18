@@ -20,6 +20,15 @@ export async function POST(req: NextRequest) {
   return NextResponse.json(await connectToDB('post', data, collection, null));
 }
 
+export async function DELETE(req: NextRequest) {
+  const { nextUrl } = req;
+  const { pathname } = nextUrl;
+  const idx = pathname.split('/').pop();
+  const collection: any = req.nextUrl.searchParams.get('colName');
+  const body = {postId : Number(idx)}
+  return NextResponse.json(await connectToDB('delete', body, collection, null));
+}
+
 export async function PUT(req: NextRequest, res: NextResponse) {
   const { nextUrl } = req;
   const { pathname } = nextUrl;

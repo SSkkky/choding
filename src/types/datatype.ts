@@ -16,6 +16,7 @@ export type myProjectPostType = {
 }
 
 export type myQnAType = {
+
     _id : number,
     title : string,
     content : {thumb : string, text : any},
@@ -42,6 +43,13 @@ export type myQnACommentValue = {
     thisDay: string,
     img : any
 }
+
+export type myStudyType = {
+    _id: number,
+    email: string | null | undefined,
+    study: youtubeSnippet
+}
+
 
 export type LikeUserEmail = {
     email: string,
@@ -112,6 +120,10 @@ export type naverSearchItem = {
 
 
 // -------------------------------------- 유튜브 검색 결과
+
+
+
+
 export type youtubeSearch = {
     "kind": string,
     "etag": string,

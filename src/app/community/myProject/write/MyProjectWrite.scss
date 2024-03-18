@@ -7,7 +7,7 @@
     color: $grayDark;
     padding: 2rem;
     padding-top: calc(79px + 1rem);
-    min-height: calc(100svh);
+    min-height: calc(100svh - 52px);
 
     input:focus {
         border-color: $main !important;
