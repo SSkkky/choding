@@ -19,9 +19,11 @@
 ---
 
 ## 개발 언어
-화면 구성 : next.js14, typescript, react, sass ...
-데이터 : axios, mongodb, firebase ... 
-협업 : git, figma
+<ul>
+<li>화면 구성 : next.js14, typescript, react, sass ...</li>
+<li>데이터 : axios, mongodb, firebase ... </li>
+<li>협업 : git, figma</li>
+</ul>
 
 ---
 
