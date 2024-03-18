@@ -5,7 +5,8 @@ import NaverProvider from "next-auth/providers/naver";
 import { saveUserToMongoDB } from '@/app/utils/saveUserToMongoDB';
 
 export const authOptions: NextAuthOptions = {
-    secret: process.env.NEXTAUTH_SECRET,
+    secret: process.env.NEXTAUTH_SECRET as string,
+    url: process.env.NEXTAUTH_URL as string,
     providers: [
         GitHubProvider({
             clientId: process.env.NEXT_PUBLIC_GITHUB_ID as string,
