@@ -122,6 +122,10 @@
         gap: 1rem;
         overflow: hidden;
 
+        .mySwiper {
+            width: 100%;
+        }
+
         figure {
             margin-top: 10px;
             flex-shrink: 0;
