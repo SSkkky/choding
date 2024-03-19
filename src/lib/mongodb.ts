@@ -19,19 +19,8 @@ export const connectToDB = async (type: string, body: any, colName: string | nul
     console.log('db접속', type, body, colName, idx)
 
     if (colName == 'LoginData' && body) { // 로그인 이메일 중복 방지
-        // console.log(body)
         let aaa = await collection.find({ email: body.email }).toArray();
-        if (aaa.length) return;
-    }
-
-    if (colName == 'myPoint') {
-        let data;
-        switch (type) {
-            case 'post': await collection.insertOne(body); break;
-            case 'put': data = await collection.updateOne({ email: body.email }, { $set: { level: body.level, point: body.point } });
-            case 'get': data = await collection.find({ email: body }).toArray();
-        }
-        return data
+        if (aaa.length) return false;
     }
 
 
@@ -69,6 +58,17 @@ export const connectToDB = async (type: string, body: any, colName: string | nul
     }
 
     if (type != 'detail') data = await collection.find({}).toArray();
+
+    if (colName == 'myPoint') {
+        let data;
+        switch (type) {
+            case 'post': await collection.insertOne(body); break;
+            case 'put': data = await collection.updateOne({ email: body.email }, { $set: { level: body.level, point: body.point } });
+            case 'get': data = await collection.find({ email: body }).toArray();
+        }
+        return data
+    }
+
 
     return data;
 }

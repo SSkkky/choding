@@ -295,7 +295,7 @@ export default function MyPage() {
                                 <p className='heart'>
                                     <Image src={heart} alt='heart'
                                         width={20} height={20}></Image>
-                                    <span>{data?.like.length}</span>
+                                    <span>{data?.like?.length}</span>
                                 </p>
                             </figure>
 

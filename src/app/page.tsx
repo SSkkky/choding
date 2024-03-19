@@ -28,6 +28,8 @@ export default function Home() {
   const [result, setResult] = useState<levelDataType>();
   const [title, setTitle] = useState<string[]>([]);
 
+
+
   useEffect(() => {
     dataCrl('get');
     if (status !== 'authenticated') {

@@ -22,7 +22,7 @@ export type myQnAType = {
     content : {thumb : string, text : any},
     Email : string | null | undefined,
     userName : string | null | undefined,
-    like : LikeUserEmail[],
+    like : LikeUserEmail[] | undefined,
     comment : myQnACommenttype[],
     postIds : number | undefined,
     postId : number,

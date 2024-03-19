@@ -189,10 +189,6 @@ export default function MyProjectWrite() {
                         placeholder='제목을 입력해주세요'
                     />
                 </section>
-                <section id="myProjectWriteImage">
-                    <label htmlFor="imgUpload">{imgText}</label>
-                    <input id="imgUpload" type="file" onChange={imageSubmit} />
-                </section>
                 <section id="writeStep1" className='writeStep'>
                     <InputSection
                         register={register}
@@ -249,6 +245,10 @@ export default function MyProjectWrite() {
                         title={''}
                         errors={errors}
                     />
+                </section>
+                <section id="myProjectWriteImage">
+                    <label htmlFor="imgUpload">{imgText}</label>
+                    <input id="imgUpload" type="file" onChange={imageSubmit} />
                 </section>
                 <section className='submit'>
                     <button type="button" className='back' onClick={onClickBackHandler}>취소</button>

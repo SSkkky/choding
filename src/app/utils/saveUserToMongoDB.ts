@@ -1,5 +1,5 @@
 import { connectToDB } from '@/lib/mongodb';
 
-export const saveUserToMongoDB = (user: any)=>{
- connectToDB('post', user, 'LoginData', null);
+export const saveUserToMongoDB = async (user: any)=>{
+  await connectToDB('post', user, 'LoginData', null);
 }

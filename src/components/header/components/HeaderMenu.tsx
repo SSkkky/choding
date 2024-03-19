@@ -53,19 +53,19 @@ export default function HeaderMenu({ active, setActive, onClickMenu }: headerMen
                                         width={40}
                                         height={40}
                                     />
-                                        <p style={loginContStyle}>
-                                            <span className='userName'>
-                                                {session?.user?.name}
-                                            </span>님<br />어서오세요!
-                                        </p>
-                                    </div>
-                            : <Link href="/login" onClick={onClickMenu}>
-                            <b>로그인 해주세요</b>
-                            <Image
-                                src={ArrowRight}
-                                alt='arrow image'
-                                width={20} height={20}
-                            />
+                                    <p style={loginContStyle}>
+                                        <span className='userName'>
+                                            {session?.user?.name}
+                                        </span>님<br />어서오세요!
+                                    </p>
+                                </div>
+                                : <Link href="/login" onClick={onClickMenu}>
+                                    <b>로그인 해주세요</b>
+                                    <Image
+                                        src={ArrowRight}
+                                        alt='arrow image'
+                                        width={20} height={20}
+                                    />
                                 </Link>
                         }
                     </div>
@@ -81,7 +81,7 @@ export default function HeaderMenu({ active, setActive, onClickMenu }: headerMen
                         <li>
                             <h3>커뮤니티</h3>
                             <ListComponent
-                                options={['홈', 'Q&A', '내 프로젝트']}
+                                options={['홈', 'Q&A', '프로젝트']}
                                 href={['/community', '/community/QnA', '/community/myProject']}
                                 onClickMenu={onClickMenu}
                             />

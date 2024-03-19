@@ -72,7 +72,7 @@ export default function AllPage() {
               <div className='QnAInfo'>
                 <p>by {item.userName}</p>
                 <p>💬 {item.comment.length}</p>
-                <p>♥ <span>{item.like.length}</span></p>
+                <p>♥ <span>{item.like?.length}</span></p>
               </div>
             </div>
 

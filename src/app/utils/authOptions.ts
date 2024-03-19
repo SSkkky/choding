@@ -37,7 +37,7 @@ export const authOptions: NextAuthOptions = {
             },
         })
 
-    ],
+    ], 
     session: {
         strategy: 'jwt',
         maxAge: 30 * 24 * 60 * 60 //30일
@@ -47,13 +47,13 @@ export const authOptions: NextAuthOptions = {
     },
     callbacks: {
         async signIn({ user }) {
-            const checkUser = await saveUserToMongoDB(user);
+            const checkUser =  await saveUserToMongoDB(user);
             return true;
         },
         async jwt({ token, user }: any) {
-            return { ...token, ...user };
+            return {...token, ...user};
         },
-        async session({ session, token }: any) {
+        async session({ session, token }: any) {            
             session.user = token;
             return session;
         },

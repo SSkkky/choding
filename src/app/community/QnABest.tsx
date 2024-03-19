@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import ArrowRight from '@/essets/arrowRight.svg';
+import empty from '@/essets/empty.svg';
 
 export default function QnABest() {
 
@@ -44,7 +45,7 @@ export default function QnABest() {
       fetchData();
     }, []);
 
-    const sortedData:any = data.slice().sort((a, b) => b.like.length - a.like.length);
+    const sortedData:any = data.slice().sort((a:any, b:any) => b.like?.length - a.like?.length);
 
     return (
       <section id="communityQnAContainer" className="communityContainer">
@@ -64,7 +65,8 @@ export default function QnABest() {
           {
             sortedData.slice(0, 3).map((item:any, index:number) => (
               <Link href={`./community/QnA/${item._id}`} key={index} className='QnABsetContainer'>
-                  <img src={item.content?.thumb} alt=""  />
+                  {/* <img src={item.content?.thumb || empty} alt="" /> */}
+                  <Image src={item.content?.thumb || empty} alt='' width={40} height={40}/>
                 <div className='BestContent'>
                   <div className='contentBox'>
                     <h2 className='title'>{item.title}</h2>
