@@ -5,7 +5,6 @@ import NaverProvider from "next-auth/providers/naver";
 import { saveUserToMongoDB } from '@/app/utils/saveUserToMongoDB';
 
 export const authOptions: NextAuthOptions = {
-    secret: process.env.NEXTAUTH_SECRET as string,
     providers: [
         GitHubProvider({
             clientId: process.env.NEXT_PUBLIC_GITHUB_ID as string,
@@ -38,19 +37,25 @@ export const authOptions: NextAuthOptions = {
             },
         })
 
-
-    ], callbacks: {
+    ],
+    session: {
+        strategy: 'jwt',
+        maxAge: 30 * 24 * 60 * 60 //30일
+    },
+    pages: {
+        signIn: "/login",
+    },
+    callbacks: {
+        async signIn({ user }) {
+            const checkUser = await saveUserToMongoDB(user);
+            return true;
+        },
         async jwt({ token, user }: any) {
-            // MongoDB에 사용자 정보 저장
-            await saveUserToMongoDB(user);
             return { ...token, ...user };
         },
         async session({ session, token }: any) {
             session.user = token;
             return session;
         },
-    },
-    pages: {
-        signIn: "/login",
-    },
+    }
 }
