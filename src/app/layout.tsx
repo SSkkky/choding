@@ -1,13 +1,9 @@
-"use client"
 
 import type { Metadata } from "next";
 import '@/styles/global.scss';
 import '@/styles/base/reset.scss';
-import Header from '@/components/header/Header';
-import Footer from '@/components/footer/Footer';
-import { SessionProvider } from 'next-auth/react';
-import UserQuestion from "@/components/question/Question";
 import { Suspense } from 'react';
+import Empty from "@/components/empty/Empty";
 
 export const metadata: Metadata = {
   manifest: "/manifest.json",
@@ -51,12 +47,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
     <html lang="ko">
       <body>
         <Suspense>
-          <SessionProvider>
-            <Header />
-            <UserQuestion />
-            {children}
-            <Footer />
-          </SessionProvider>
+          <Empty>{children}</Empty>
         </Suspense>
       </body>
     </html>
