@@ -13,7 +13,7 @@ export default function LevelTestStart({ startTest }: any) {
     const { data: session, status } = useSession();
     const [mypageData, setMypageData] = useState<userPointType>();
     const { quiz, isOpenFunc } = useQuestion();
-
+    const [isOpen, setIsOpen] = useState(false);
 
 
     const router = useRouter();
@@ -37,11 +37,33 @@ export default function LevelTestStart({ startTest }: any) {
     }, [session])
 
 
+    function handleClose() { //로컬스토리지 하루동안 안열림
+        isOpenFunc({ isOpen: false, isTest: false })
+        localStorage.setItem('popupClosedTime', String(new Date().getTime()));
+    }
+
+    //팝업 시간계산
+    useEffect(() => {
+        const lastClosedTime = localStorage.getItem('popupClosedTime');
+        if (lastClosedTime) {
+            const oneDay = 24 * 60 * 60 * 1000; // milliseconds
+            const currentTime = new Date().getTime();
+            const timeDifference = currentTime - Number(lastClosedTime);
+            if (timeDifference < oneDay) {
+                isOpenFunc({ isOpen: false, isTest: false })
+            } else {
+                isOpenFunc({ isOpen: true, isTest: true })
+            }
+        } else {
+            isOpenFunc({ isOpen: true, isTest: true })
+        }
+    }, []);
+
 
 
 
     return (
-        <div>
+        <>
             <div className='popUp01'>
                 <div className='popUpContents'>
                     <h3>레벨 테스트</h3>
@@ -75,11 +97,9 @@ export default function LevelTestStart({ startTest }: any) {
                 </div>
             </div>
 
-            <label className='popUpCloseBtn'>
-                <input type="checkbox" />
+            <label className='popUpCloseBtn' onClick={handleClose}>
                 하루동안 열지 않기
             </label>
-        </div>
-
+        </>
     )
 }

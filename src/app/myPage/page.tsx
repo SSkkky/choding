@@ -170,11 +170,10 @@ export default function MyPage() {
 
 
 
-
-
-
-
-
+    function handleOpen() {  //로컬스토리지 저장된 값을 지우고 팝업 열기
+        isOpenFunc({ isOpen: true, isTest: true });
+        localStorage.removeItem('popupClosedTime');
+    }
 
 
     return (
@@ -193,7 +192,7 @@ export default function MyPage() {
                     </div>
 
                     <div className='myInfo'>
-                        <div className='myLv' onClick={() => { isOpenFunc({ isOpen: true, isTest: true }) }}>
+                        <div className='myLv' onClick={handleOpen}>
                             <p>레벨</p>
 
                             {mypageData?.level ?

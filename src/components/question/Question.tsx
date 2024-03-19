@@ -15,20 +15,16 @@ export default function UserQuestion() {
 
     const { quiz, isOpenFunc } = useQuestion();
 
-
     const handleClose = () => {
         isOpenFunc({ isOpen: false, isTest: false });
     };
 
-
     if (!quiz.isOpen) return null;
 
-
-
     return (
-        <section className={`question ${quiz.isOpen ? 'active' : ''}`}>
+        <>
 
-            <div className='popUpQues'>
+            <section className={`question ${quiz.isOpen ? 'active' : ''}`}>
                 <div className='popUpBg'>
                     <button className='popUpX'
                         onClick={handleClose}>
@@ -44,12 +40,10 @@ export default function UserQuestion() {
                         quiz.isTest ? <LevelTest /> : <Dailyquiz />
                     }
 
-
                 </div>
-            </div>
+            </section >
+        </>
 
-
-
-        </section >
     );
 }
+
