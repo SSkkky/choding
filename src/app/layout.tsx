@@ -1,5 +1,3 @@
-"use client";
-
 import type { Metadata } from "next";
 import '@/styles/global.scss';
 import '@/styles/base/reset.scss';
