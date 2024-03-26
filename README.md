@@ -1,4 +1,4 @@
-![image](https://github.com/SSkkky/choding/assets/125051373/055061f6-22f0-4964-997b-49baa58a4910)
+<img src="https://firebasestorage.googleapis.com/v0/b/choding.appspot.com/o/gom%2Fchoding.png?alt=media&token=5eed7587-0690-443f-9b84-fa5b22680dc5">
 
 # 🌎 초딩
 초보들의 코딩 공부, 초딩은
