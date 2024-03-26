@@ -1,25 +1,31 @@
 {
-    "short_name": "초딩",
-    "name": "초보들의 코딩공부 - 초딩",
+    "theme_color": "#45ffca",
+    "background_color": "#45ffca",
+    "display": "browser",
+    "scope": "/",
+    "name": "\ucd08\ub529",
+    "short_name": "choding",
+    "description": "\ucd08\ubcf4\ub4e4\uc758 \ucf54\ub529\uacf5\ubd80",
     "icons": [
         {
-            "src": "favicon.ico",
-            "sizes": "64x64 32x32 24x24 16x16",
-            "type": "image/x-icon"
+            "src": "/image/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
         },
         {
-            "src": "logo192.png",
-            "type": "image/png",
-            "sizes": "192x192"
+            "src": "/image/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
         },
         {
-            "src": "logo512.png",
-            "type": "image/png",
-            "sizes": "512x512"
+            "src": "/image/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/image/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
         }
-    ],
-    "start_url": ".",
-    "display": "standalone",
-    "theme_color": "#000000",
-    "background_color": "#ffffff"
+    ]
 }
